@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "NeuralNetworkEvolution"
+  site-url: "https://ParticularlyPythonicBS.github.io/NeuralNetworkEvolution"
+  description: "Exploring neural networks that learn new architectures with diverse nodes"
+  repo-branch: main
+  repo-url: "https://github.com/ParticularlyPythonicBS/NeuralNetworkEvolution"
