@@ -34,4 +34,4 @@ class Neuron(eqx.Module):
         """
         Returns the importance of the neuron. This is the L2 norm of the weight vector.
         """
-        return jnp.linalg.norm(self.weight)
+        return jnp.linalg.norm(self.weight)/jnp.sqrt(self.weight.size)
