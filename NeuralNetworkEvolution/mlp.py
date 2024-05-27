@@ -51,7 +51,7 @@ class CustomMLP(eqx.Module):
     def __call__(self, x):
         for layer in self.layers:
             x = jnp.array([neuron(x) for neuron in layer])
-        return x[0]  # Since output layer is a single neuron
+        return x
 
     def add_neuron(self, layer_index, activation=jax.nn.relu, key=None):
         if key is None:

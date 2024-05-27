@@ -22,8 +22,11 @@ class Neuron(eqx.Module):
             key = jax.random.PRNGKey(0)
             key, _ = jax.random.split(key)
         w_key, b_key = jax.random.split(key)
-        self.weight = jax.random.normal(w_key, (in_features,))
-        self.bias = jax.random.normal(b_key, ())
+        lim = 1/jnp.sqrt(in_features)
+        # self.weight = jax.random.normal(w_key, (in_features,))
+        # self.bias = jax.random.normal(b_key, ())
+        self.weight = jax.random.uniform(w_key, (in_features,), minval=-lim, maxval=lim)
+        self.bias = jax.random.uniform(b_key, (), minval=-lim, maxval=lim)
 
         self.activation = activation
 
