@@ -1,0 +1,1200 @@
+Epoch 000, Loss: 0.800280698116291, Neurons: 11
+Epoch 001, Loss: 0.7516523674310822, Neurons: 11
+Epoch 002, Loss: 0.7059578771150312, Neurons: 11
+Epoch 003, Loss: 0.6633610382155511, Neurons: 11
+Epoch 004, Loss: 0.6240466101954848, Neurons: 11
+Epoch 005, Loss: 0.5882168564715944, Neurons: 11
+Epoch 006, Loss: 0.5561838428239797, Neurons: 11
+Epoch 007, Loss: 0.5278062516620872, Neurons: 11
+Epoch 008, Loss: 0.502836275456496, Neurons: 11
+Epoch 009, Loss: 0.4812845742361461, Neurons: 11
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[5, 6, 1]
+Epoch 010, Loss: 0.5594178498588926, Neurons: 12
+Epoch 011, Loss: 0.5089471956125159, Neurons: 12
+Epoch 012, Loss: 0.46769501701750404, Neurons: 12
+Epoch 013, Loss: 0.4349370717089732, Neurons: 12
+Epoch 014, Loss: 0.40987044071267326, Neurons: 12
+Epoch 015, Loss: 0.3918695935254832, Neurons: 12
+Epoch 016, Loss: 0.37992536279703476, Neurons: 12
+Epoch 017, Loss: 0.372691398338041, Neurons: 12
+Epoch 018, Loss: 0.36858782783392063, Neurons: 12
+Epoch 019, Loss: 0.36607035238044056, Neurons: 12
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[6, 6, 1]
+Epoch 020, Loss: 0.363654288925876, Neurons: 13
+Epoch 021, Loss: 0.3497559274754532, Neurons: 13
+Epoch 022, Loss: 0.33773684426909584, Neurons: 13
+Epoch 023, Loss: 0.32519493778312425, Neurons: 13
+Epoch 024, Loss: 0.3118264823653797, Neurons: 13
+Epoch 025, Loss: 0.2975414526840364, Neurons: 13
+Epoch 026, Loss: 0.2821947125463679, Neurons: 13
+Epoch 027, Loss: 0.26564838110158073, Neurons: 13
+Epoch 028, Loss: 0.24779009998257265, Neurons: 13
+Epoch 029, Loss: 0.22863384729843558, Neurons: 13
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[6, 7, 1]
+Epoch 030, Loss: 0.20842163905811495, Neurons: 14
+Epoch 031, Loss: 0.19405251846440844, Neurons: 14
+Epoch 032, Loss: 0.17891450788925867, Neurons: 14
+Epoch 033, Loss: 0.16383981585879245, Neurons: 14
+Epoch 034, Loss: 0.14855505803281643, Neurons: 14
+Epoch 035, Loss: 0.13332300725344062, Neurons: 14
+Epoch 036, Loss: 0.1190837194073919, Neurons: 14
+Epoch 037, Loss: 0.1067048039170027, Neurons: 14
+Epoch 038, Loss: 0.09753388101116105, Neurons: 14
+Epoch 039, Loss: 0.09236254312663408, Neurons: 14
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[6, 8, 1]
+Epoch 040, Loss: 1.347311492175396, Neurons: 15
+Epoch 041, Loss: 1.0061602060761035, Neurons: 15
+Epoch 042, Loss: 0.717196852640277, Neurons: 15
+Epoch 043, Loss: 0.4872032077329283, Neurons: 15
+Epoch 044, Loss: 0.3182862497315758, Neurons: 15
+Epoch 045, Loss: 0.2144991180114261, Neurons: 15
+Epoch 046, Loss: 0.17102875724708128, Neurons: 15
+Epoch 047, Loss: 0.17672249782628144, Neurons: 15
+Epoch 048, Loss: 0.20892100519945028, Neurons: 15
+Epoch 049, Loss: 0.24596649972436507, Neurons: 15
+Removed neuron to hidden layer 2 at index 7
+network shape updated to :[6, 7, 1]
+Epoch 050, Loss: 1.1222216294791187, Neurons: 14
+Epoch 051, Loss: 0.9012710949800018, Neurons: 14
+Epoch 052, Loss: 0.6943854172681699, Neurons: 14
+Epoch 053, Loss: 0.5092936594336765, Neurons: 14
+Epoch 054, Loss: 0.3533820594600345, Neurons: 14
+Epoch 055, Loss: 0.23241836120162052, Neurons: 14
+Epoch 056, Loss: 0.14819200915010897, Neurons: 14
+Epoch 057, Loss: 0.10088333985000578, Neurons: 14
+Epoch 058, Loss: 0.08657377186219452, Neurons: 14
+Epoch 059, Loss: 0.09601274779770602, Neurons: 14
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[6, 8, 1]
+Epoch 060, Loss: 0.11832489773642697, Neurons: 15
+Epoch 061, Loss: 0.08747695141289799, Neurons: 15
+Epoch 062, Loss: 0.0822684099338117, Neurons: 15
+Epoch 063, Loss: 0.08760612290572962, Neurons: 15
+Epoch 064, Loss: 0.08813251263395551, Neurons: 15
+Epoch 065, Loss: 0.08332022129575611, Neurons: 15
+Epoch 066, Loss: 0.07722079151372892, Neurons: 15
+Epoch 067, Loss: 0.07296945122678744, Neurons: 15
+Epoch 068, Loss: 0.07139484291005414, Neurons: 15
+Epoch 069, Loss: 0.0714541474786373, Neurons: 15
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[7, 8, 1]
+Epoch 070, Loss: 0.07153367815438172, Neurons: 16
+Epoch 071, Loss: 0.06964028879545014, Neurons: 16
+Epoch 072, Loss: 0.06809595996208671, Neurons: 16
+Epoch 073, Loss: 0.06440472144786706, Neurons: 16
+Epoch 074, Loss: 0.06356221692118945, Neurons: 16
+Epoch 075, Loss: 0.06348373341496953, Neurons: 16
+Epoch 076, Loss: 0.06166682568965439, Neurons: 16
+Epoch 077, Loss: 0.05940863951945416, Neurons: 16
+Epoch 078, Loss: 0.058342564223956846, Neurons: 16
+Epoch 079, Loss: 0.0580020236318437, Neurons: 16
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[8, 8, 1]
+Epoch 080, Loss: 0.057069510606680224, Neurons: 17
+Epoch 081, Loss: 0.06104121590031307, Neurons: 17
+Epoch 082, Loss: 0.055252744027869435, Neurons: 17
+Epoch 083, Loss: 0.05501872175737683, Neurons: 17
+Epoch 084, Loss: 0.0560464132048873, Neurons: 17
+Epoch 085, Loss: 0.053985474915280135, Neurons: 17
+Epoch 086, Loss: 0.05206451815345468, Neurons: 17
+Epoch 087, Loss: 0.05181301149221315, Neurons: 17
+Epoch 088, Loss: 0.051733895239897035, Neurons: 17
+Epoch 089, Loss: 0.050623723467510914, Neurons: 17
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[8, 9, 1]
+Epoch 090, Loss: 0.04920612819781893, Neurons: 18
+Epoch 091, Loss: 0.05422486531353936, Neurons: 18
+Epoch 092, Loss: 0.048270817618801865, Neurons: 18
+Epoch 093, Loss: 0.04918117540599551, Neurons: 18
+Epoch 094, Loss: 0.04904618421335219, Neurons: 18
+Epoch 095, Loss: 0.04705157119289602, Neurons: 18
+Epoch 096, Loss: 0.04598066160124654, Neurons: 18
+Epoch 097, Loss: 0.04584450213162533, Neurons: 18
+Epoch 098, Loss: 0.04504907054280371, Neurons: 18
+Epoch 099, Loss: 0.04377099959206249, Neurons: 18
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[9, 9, 1]
+Epoch 100, Loss: 0.6521778753815742, Neurons: 19
+Epoch 101, Loss: 0.6375674978902552, Neurons: 19
+Epoch 102, Loss: 0.6226736463290911, Neurons: 19
+Epoch 103, Loss: 0.6081749144636026, Neurons: 19
+Epoch 104, Loss: 0.595372348830748, Neurons: 19
+Epoch 105, Loss: 0.5839663231919845, Neurons: 19
+Epoch 106, Loss: 0.5716220219941975, Neurons: 19
+Epoch 107, Loss: 0.5576086643899647, Neurons: 19
+Epoch 108, Loss: 0.5427052835194827, Neurons: 19
+Epoch 109, Loss: 0.5278177055901725, Neurons: 19
+Removed neuron to hidden layer 1 at index 8
+network shape updated to :[8, 9, 1]
+Epoch 110, Loss: 0.11117436606547787, Neurons: 18
+Epoch 111, Loss: 0.06899706759502815, Neurons: 18
+Epoch 112, Loss: 0.053123221485964225, Neurons: 18
+Epoch 113, Loss: 0.048727852618277015, Neurons: 18
+Epoch 114, Loss: 0.04645765475536567, Neurons: 18
+Epoch 115, Loss: 0.0454916714009493, Neurons: 18
+Epoch 116, Loss: 0.04715057449831479, Neurons: 18
+Epoch 117, Loss: 0.05039152913150534, Neurons: 18
+Epoch 118, Loss: 0.052399194113525636, Neurons: 18
+Epoch 119, Loss: 0.05178297218640272, Neurons: 18
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[8, 10, 1]
+Epoch 120, Loss: 0.04894613790002161, Neurons: 19
+Epoch 121, Loss: 0.03856857238584431, Neurons: 19
+Epoch 122, Loss: 0.039248873112001335, Neurons: 19
+Epoch 123, Loss: 0.04136004770546289, Neurons: 19
+Epoch 124, Loss: 0.04038507550713553, Neurons: 19
+Epoch 125, Loss: 0.03782281333534457, Neurons: 19
+Epoch 126, Loss: 0.03568923423651871, Neurons: 19
+Epoch 127, Loss: 0.034972544198886804, Neurons: 19
+Epoch 128, Loss: 0.03540547785395965, Neurons: 19
+Epoch 129, Loss: 0.03580135164134909, Neurons: 19
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[9, 10, 1]
+Epoch 130, Loss: 0.500878367034989, Neurons: 20
+Epoch 131, Loss: 0.4846793819149381, Neurons: 20
+Epoch 132, Loss: 0.46824548657282195, Neurons: 20
+Epoch 133, Loss: 0.4511084964592642, Neurons: 20
+Epoch 134, Loss: 0.43484256703124285, Neurons: 20
+Epoch 135, Loss: 0.42146558510877685, Neurons: 20
+Epoch 136, Loss: 0.41187969501787586, Neurons: 20
+Epoch 137, Loss: 0.4036326419105417, Neurons: 20
+Epoch 138, Loss: 0.39314794994660146, Neurons: 20
+Epoch 139, Loss: 0.38011925512848405, Neurons: 20
+Removed neuron to hidden layer 1 at index 8
+network shape updated to :[8, 10, 1]
+Epoch 140, Loss: 0.2626873305955343, Neurons: 19
+Epoch 141, Loss: 0.16393579984665382, Neurons: 19
+Epoch 142, Loss: 0.09990576504336644, Neurons: 19
+Epoch 143, Loss: 0.06709110274393247, Neurons: 19
+Epoch 144, Loss: 0.057627110140536675, Neurons: 19
+Epoch 145, Loss: 0.05821577104568156, Neurons: 19
+Epoch 146, Loss: 0.059557038369836016, Neurons: 19
+Epoch 147, Loss: 0.059214983516616033, Neurons: 19
+Epoch 148, Loss: 0.0587310010858605, Neurons: 19
+Epoch 149, Loss: 0.05991376088454833, Neurons: 19
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[9, 10, 1]
+Epoch 150, Loss: 0.06212411278926781, Neurons: 20
+Epoch 151, Loss: 0.045629643873835446, Neurons: 20
+Epoch 152, Loss: 0.041276125423990825, Neurons: 20
+Epoch 153, Loss: 0.041465340850841796, Neurons: 20
+Epoch 154, Loss: 0.0403696928728616, Neurons: 20
+Epoch 155, Loss: 0.03829689386077817, Neurons: 20
+Epoch 156, Loss: 0.035906013134606826, Neurons: 20
+Epoch 157, Loss: 0.03363751004607209, Neurons: 20
+Epoch 158, Loss: 0.03187474613229734, Neurons: 20
+Epoch 159, Loss: 0.030629324840836192, Neurons: 20
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[9, 11, 1]
+Epoch 160, Loss: 0.03139893323742595, Neurons: 21
+Epoch 161, Loss: 0.031584220439283835, Neurons: 21
+Epoch 162, Loss: 0.030128660991070498, Neurons: 21
+Epoch 163, Loss: 0.02821052921510386, Neurons: 21
+Epoch 164, Loss: 0.027590367274974947, Neurons: 21
+Epoch 165, Loss: 0.027948092194992735, Neurons: 21
+Epoch 166, Loss: 0.02722978883841079, Neurons: 21
+Epoch 167, Loss: 0.025998270265947553, Neurons: 21
+Epoch 168, Loss: 0.025364477317247846, Neurons: 21
+Epoch 169, Loss: 0.02535103301011955, Neurons: 21
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[10, 11, 1]
+Epoch 170, Loss: 1.061522510748439, Neurons: 22
+Epoch 171, Loss: 0.39490690039199866, Neurons: 22
+Epoch 172, Loss: 0.20015166636617668, Neurons: 22
+Epoch 173, Loss: 0.2898061682823144, Neurons: 22
+Epoch 174, Loss: 0.4009655335247766, Neurons: 22
+Epoch 175, Loss: 0.4244016087749177, Neurons: 22
+Epoch 176, Loss: 0.36525248165463065, Neurons: 22
+Epoch 177, Loss: 0.2673954531460902, Neurons: 22
+Epoch 178, Loss: 0.1755757878414659, Neurons: 22
+Epoch 179, Loss: 0.12037148983101646, Neurons: 22
+Removed neuron to hidden layer 1 at index 9
+network shape updated to :[9, 11, 1]
+Epoch 180, Loss: 0.10139612107219392, Neurons: 21
+Epoch 181, Loss: 0.04896373565236702, Neurons: 21
+Epoch 182, Loss: 0.03131292844817961, Neurons: 21
+Epoch 183, Loss: 0.031695692655832164, Neurons: 21
+Epoch 184, Loss: 0.036476273397076785, Neurons: 21
+Epoch 185, Loss: 0.040295489111458194, Neurons: 21
+Epoch 186, Loss: 0.04218544390551736, Neurons: 21
+Epoch 187, Loss: 0.04117745077009608, Neurons: 21
+Epoch 188, Loss: 0.03714178201830338, Neurons: 21
+Epoch 189, Loss: 0.031662812444025974, Neurons: 21
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[10, 11, 1]
+Epoch 190, Loss: 0.026794166562650382, Neurons: 22
+Epoch 191, Loss: 0.026048419152576295, Neurons: 22
+Epoch 192, Loss: 0.026639226323685632, Neurons: 22
+Epoch 193, Loss: 0.025552516786800268, Neurons: 22
+Epoch 194, Loss: 0.022691094957023376, Neurons: 22
+Epoch 195, Loss: 0.022631514557669936, Neurons: 22
+Epoch 196, Loss: 0.023948634791156297, Neurons: 22
+Epoch 197, Loss: 0.023589416094511904, Neurons: 22
+Epoch 198, Loss: 0.0224254530452482, Neurons: 22
+Epoch 199, Loss: 0.021764972076032167, Neurons: 22
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[10, 12, 1]
+Epoch 200, Loss: 0.028799309032116308, Neurons: 23
+Epoch 201, Loss: 0.02288236293264722, Neurons: 23
+Epoch 202, Loss: 0.025957045284798773, Neurons: 23
+Epoch 203, Loss: 0.020246253205637985, Neurons: 23
+Epoch 204, Loss: 0.01857774867739668, Neurons: 23
+Epoch 205, Loss: 0.02101233770053778, Neurons: 23
+Epoch 206, Loss: 0.0211662766748906, Neurons: 23
+Epoch 207, Loss: 0.0186521060353801, Neurons: 23
+Epoch 208, Loss: 0.016990207363073953, Neurons: 23
+Epoch 209, Loss: 0.01774215500894848, Neurons: 23
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[11, 12, 1]
+Epoch 210, Loss: 0.018893302237477084, Neurons: 24
+Epoch 211, Loss: 0.02860841963692013, Neurons: 24
+Epoch 212, Loss: 0.018115225631233706, Neurons: 24
+Epoch 213, Loss: 0.01746344814622245, Neurons: 24
+Epoch 214, Loss: 0.021793620884469265, Neurons: 24
+Epoch 215, Loss: 0.019810609848076338, Neurons: 24
+Epoch 216, Loss: 0.016020834888750023, Neurons: 24
+Epoch 217, Loss: 0.01570807777807571, Neurons: 24
+Epoch 218, Loss: 0.017740795539249902, Neurons: 24
+Epoch 219, Loss: 0.018052081880964202, Neurons: 24
+Removed neuron to hidden layer 1 at index 10
+network shape updated to :[10, 12, 1]
+Epoch 220, Loss: 0.016234704107922725, Neurons: 23
+Epoch 221, Loss: 0.029103384780405778, Neurons: 23
+Epoch 222, Loss: 0.016288047292140725, Neurons: 23
+Epoch 223, Loss: 0.016812422139670154, Neurons: 23
+Epoch 224, Loss: 0.021549321102675423, Neurons: 23
+Epoch 225, Loss: 0.018847831445563904, Neurons: 23
+Epoch 226, Loss: 0.014517835908690248, Neurons: 23
+Epoch 227, Loss: 0.01423425127200533, Neurons: 23
+Epoch 228, Loss: 0.01663172694570201, Neurons: 23
+Epoch 229, Loss: 0.017156765412198318, Neurons: 23
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[11, 12, 1]
+Epoch 230, Loss: 0.0852084814467905, Neurons: 24
+Epoch 231, Loss: 0.05911835627391489, Neurons: 24
+Epoch 232, Loss: 0.04736832859075422, Neurons: 24
+Epoch 233, Loss: 0.03686587260922299, Neurons: 24
+Epoch 234, Loss: 0.027164301441296577, Neurons: 24
+Epoch 235, Loss: 0.023689358017409037, Neurons: 24
+Epoch 236, Loss: 0.02364956887059662, Neurons: 24
+Epoch 237, Loss: 0.022402605696553467, Neurons: 24
+Epoch 238, Loss: 0.02003356099034291, Neurons: 24
+Epoch 239, Loss: 0.018176971675461617, Neurons: 24
+Removed neuron to hidden layer 1 at index 10
+network shape updated to :[10, 12, 1]
+Epoch 240, Loss: 0.02053086672375681, Neurons: 23
+Epoch 241, Loss: 0.021031292171700664, Neurons: 23
+Epoch 242, Loss: 0.01859773927740997, Neurons: 23
+Epoch 243, Loss: 0.013154246865893896, Neurons: 23
+Epoch 244, Loss: 0.014803680188416445, Neurons: 23
+Epoch 245, Loss: 0.016481851305402577, Neurons: 23
+Epoch 246, Loss: 0.014673225998923116, Neurons: 23
+Epoch 247, Loss: 0.012506740864042172, Neurons: 23
+Epoch 248, Loss: 0.012352069445221827, Neurons: 23
+Epoch 249, Loss: 0.013390666874246187, Neurons: 23
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[10, 13, 1]
+Epoch 250, Loss: 0.8895938204865047, Neurons: 24
+Epoch 251, Loss: 0.5065780453650671, Neurons: 24
+Epoch 252, Loss: 0.2515785552731752, Neurons: 24
+Epoch 253, Loss: 0.11297980763710343, Neurons: 24
+Epoch 254, Loss: 0.06462839561547035, Neurons: 24
+Epoch 255, Loss: 0.06967330993990782, Neurons: 24
+Epoch 256, Loss: 0.09323744481952227, Neurons: 24
+Epoch 257, Loss: 0.11330570178695794, Neurons: 24
+Epoch 258, Loss: 0.12146763496667948, Neurons: 24
+Epoch 259, Loss: 0.11810014041633764, Neurons: 24
+Removed neuron to hidden layer 2 at index 12
+network shape updated to :[10, 12, 1]
+Epoch 260, Loss: 0.5178035272925653, Neurons: 23
+Epoch 261, Loss: 0.3658426666108772, Neurons: 23
+Epoch 262, Loss: 0.26454153502884103, Neurons: 23
+Epoch 263, Loss: 0.20475503168177384, Neurons: 23
+Epoch 264, Loss: 0.16660460307642566, Neurons: 23
+Epoch 265, Loss: 0.13461699817069414, Neurons: 23
+Epoch 266, Loss: 0.10296845811322525, Neurons: 23
+Epoch 267, Loss: 0.07332142426742493, Neurons: 23
+Epoch 268, Loss: 0.050077624519156684, Neurons: 23
+Epoch 269, Loss: 0.03694568452137131, Neurons: 23
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[11, 12, 1]
+Epoch 270, Loss: 0.034915380163068194, Neurons: 24
+Epoch 271, Loss: 0.015276051034082617, Neurons: 24
+Epoch 272, Loss: 0.018102208014429987, Neurons: 24
+Epoch 273, Loss: 0.019251436354554424, Neurons: 24
+Epoch 274, Loss: 0.01870454729324155, Neurons: 24
+Epoch 275, Loss: 0.017495750237196152, Neurons: 24
+Epoch 276, Loss: 0.01555970624381766, Neurons: 24
+Epoch 277, Loss: 0.013264628681948018, Neurons: 24
+Epoch 278, Loss: 0.011880172791221721, Neurons: 24
+Epoch 279, Loss: 0.012164713828858847, Neurons: 24
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[12, 12, 1]
+Epoch 280, Loss: 0.01319157979379774, Neurons: 25
+Epoch 281, Loss: 0.02446307550446728, Neurons: 25
+Epoch 282, Loss: 0.01126025915100409, Neurons: 25
+Epoch 283, Loss: 0.015023123933289998, Neurons: 25
+Epoch 284, Loss: 0.01832997069221143, Neurons: 25
+Epoch 285, Loss: 0.014368426843112068, Neurons: 25
+Epoch 286, Loss: 0.010555168578448924, Neurons: 25
+Epoch 287, Loss: 0.010799592780866094, Neurons: 25
+Epoch 288, Loss: 0.01275776221487873, Neurons: 25
+Epoch 289, Loss: 0.013117577700414522, Neurons: 25
+Removed neuron to hidden layer 1 at index 11
+network shape updated to :[11, 12, 1]
+Epoch 290, Loss: 0.01168954682743587, Neurons: 24
+Epoch 291, Loss: 0.017468207615812834, Neurons: 24
+Epoch 292, Loss: 0.013087183022251318, Neurons: 24
+Epoch 293, Loss: 0.012429659053973505, Neurons: 24
+Epoch 294, Loss: 0.010591500843256604, Neurons: 24
+Epoch 295, Loss: 0.010358176608262762, Neurons: 24
+Epoch 296, Loss: 0.011714197321042778, Neurons: 24
+Epoch 297, Loss: 0.011257027301858187, Neurons: 24
+Epoch 298, Loss: 0.009426994091736767, Neurons: 24
+Epoch 299, Loss: 0.008813082238545343, Neurons: 24
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[11, 13, 1]
+Epoch 300, Loss: 0.011854986550012875, Neurons: 25
+Epoch 301, Loss: 0.027468047058554233, Neurons: 25
+Epoch 302, Loss: 0.011842762951084971, Neurons: 25
+Epoch 303, Loss: 0.01232353212576821, Neurons: 25
+Epoch 304, Loss: 0.018084185271165135, Neurons: 25
+Epoch 305, Loss: 0.015308873502873901, Neurons: 25
+Epoch 306, Loss: 0.009907273374568653, Neurons: 25
+Epoch 307, Loss: 0.008695548649801967, Neurons: 25
+Epoch 308, Loss: 0.011550530658762189, Neurons: 25
+Epoch 309, Loss: 0.013354693638812492, Neurons: 25
+Removed neuron to hidden layer 2 at index 12
+network shape updated to :[11, 12, 1]
+Epoch 310, Loss: 0.012372637039582236, Neurons: 24
+Epoch 311, Loss: 0.01867526388909101, Neurons: 24
+Epoch 312, Loss: 0.011350899064904245, Neurons: 24
+Epoch 313, Loss: 0.008332700635150719, Neurons: 24
+Epoch 314, Loss: 0.012243458393651284, Neurons: 24
+Epoch 315, Loss: 0.012005878291203427, Neurons: 24
+Epoch 316, Loss: 0.008707479665462049, Neurons: 24
+Epoch 317, Loss: 0.00786010531241658, Neurons: 24
+Epoch 318, Loss: 0.009647428315196967, Neurons: 24
+Epoch 319, Loss: 0.010261979009096806, Neurons: 24
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[12, 12, 1]
+Epoch 320, Loss: 9.517889489346164, Neurons: 25
+Epoch 321, Loss: 5.277811321392881, Neurons: 25
+Epoch 322, Loss: 2.363157077878973, Neurons: 25
+Epoch 323, Loss: 0.8344638225003876, Neurons: 25
+Epoch 324, Loss: 0.5278064577462431, Neurons: 25
+Epoch 325, Loss: 1.0013550635757154, Neurons: 25
+Epoch 326, Loss: 1.6944621354596643, Neurons: 25
+Epoch 327, Loss: 2.202317349992823, Neurons: 25
+Epoch 328, Loss: 2.3726856100404152, Neurons: 25
+Epoch 329, Loss: 2.2257941178991714, Neurons: 25
+Removed neuron to hidden layer 1 at index 11
+network shape updated to :[11, 12, 1]
+Epoch 330, Loss: 0.8413826734862041, Neurons: 24
+Epoch 331, Loss: 0.5717037134215761, Neurons: 24
+Epoch 332, Loss: 0.349199370559929, Neurons: 24
+Epoch 333, Loss: 0.17780718418377506, Neurons: 24
+Epoch 334, Loss: 0.06560719711250582, Neurons: 24
+Epoch 335, Loss: 0.01830246457929889, Neurons: 24
+Epoch 336, Loss: 0.02608599520281794, Neurons: 24
+Epoch 337, Loss: 0.06125927378225673, Neurons: 24
+Epoch 338, Loss: 0.0976455902837441, Neurons: 24
+Epoch 339, Loss: 0.12153664708174551, Neurons: 24
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[12, 12, 1]
+Epoch 340, Loss: 0.11469901489231882, Neurons: 25
+Epoch 341, Loss: 0.035638208562122645, Neurons: 25
+Epoch 342, Loss: 0.0094461560478709, Neurons: 25
+Epoch 343, Loss: 0.024070197265305, Neurons: 25
+Epoch 344, Loss: 0.04105757172999988, Neurons: 25
+Epoch 345, Loss: 0.04245216783808117, Neurons: 25
+Epoch 346, Loss: 0.032286007882441695, Neurons: 25
+Epoch 347, Loss: 0.019354628817788575, Neurons: 25
+Epoch 348, Loss: 0.010727344343975258, Neurons: 25
+Epoch 349, Loss: 0.009446947504269484, Neurons: 25
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[13, 12, 1]
+Epoch 350, Loss: 0.013636535771693884, Neurons: 26
+Epoch 351, Loss: 0.017952460544308088, Neurons: 26
+Epoch 352, Loss: 0.011479585499303625, Neurons: 26
+Epoch 353, Loss: 0.008035873982016887, Neurons: 26
+Epoch 354, Loss: 0.012045616242974948, Neurons: 26
+Epoch 355, Loss: 0.012394228679875944, Neurons: 26
+Epoch 356, Loss: 0.009111594720631373, Neurons: 26
+Epoch 357, Loss: 0.007340024097357138, Neurons: 26
+Epoch 358, Loss: 0.0086021379769999, Neurons: 26
+Epoch 359, Loss: 0.009858599777129553, Neurons: 26
+Removed neuron to hidden layer 1 at index 12
+network shape updated to :[12, 12, 1]
+Epoch 360, Loss: 0.009114312770717576, Neurons: 25
+Epoch 361, Loss: 0.018807554711336855, Neurons: 25
+Epoch 362, Loss: 0.009733433132325683, Neurons: 25
+Epoch 363, Loss: 0.00956807578969621, Neurons: 25
+Epoch 364, Loss: 0.012027195722406738, Neurons: 25
+Epoch 365, Loss: 0.00960589404157858, Neurons: 25
+Epoch 366, Loss: 0.007864907949253718, Neurons: 25
+Epoch 367, Loss: 0.008989574991637068, Neurons: 25
+Epoch 368, Loss: 0.009899771045639959, Neurons: 25
+Epoch 369, Loss: 0.008697796838467614, Neurons: 25
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[13, 12, 1]
+Epoch 370, Loss: 0.01030395285936995, Neurons: 26
+Epoch 371, Loss: 0.025315481174889368, Neurons: 26
+Epoch 372, Loss: 0.011186345089458576, Neurons: 26
+Epoch 373, Loss: 0.008186861673213171, Neurons: 26
+Epoch 374, Loss: 0.014628671607762923, Neurons: 26
+Epoch 375, Loss: 0.012463306458360092, Neurons: 26
+Epoch 376, Loss: 0.007614374739343116, Neurons: 26
+Epoch 377, Loss: 0.006759827031665708, Neurons: 26
+Epoch 378, Loss: 0.008853110579045554, Neurons: 26
+Epoch 379, Loss: 0.009918946278376596, Neurons: 26
+Removed neuron to hidden layer 1 at index 12
+network shape updated to :[12, 12, 1]
+Epoch 380, Loss: 0.009418132325747947, Neurons: 25
+Epoch 381, Loss: 0.017678995305624723, Neurons: 25
+Epoch 382, Loss: 0.009386833507725774, Neurons: 25
+Epoch 383, Loss: 0.007844299428685211, Neurons: 25
+Epoch 384, Loss: 0.010250522484925377, Neurons: 25
+Epoch 385, Loss: 0.009732144361082377, Neurons: 25
+Epoch 386, Loss: 0.007624601659084084, Neurons: 25
+Epoch 387, Loss: 0.007079905729855682, Neurons: 25
+Epoch 388, Loss: 0.007707946091245855, Neurons: 25
+Epoch 389, Loss: 0.007951687560507036, Neurons: 25
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[12, 13, 1]
+Epoch 390, Loss: 0.007545848401236006, Neurons: 26
+Epoch 391, Loss: 0.014380693308268046, Neurons: 26
+Epoch 392, Loss: 0.007216053716892082, Neurons: 26
+Epoch 393, Loss: 0.0068315039078250895, Neurons: 26
+Epoch 394, Loss: 0.009740913617925553, Neurons: 26
+Epoch 395, Loss: 0.008312210262108799, Neurons: 26
+Epoch 396, Loss: 0.00578723758658225, Neurons: 26
+Epoch 397, Loss: 0.005813187441569557, Neurons: 26
+Epoch 398, Loss: 0.007299658401230983, Neurons: 26
+Epoch 399, Loss: 0.0073773053607525015, Neurons: 26
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[12, 14, 1]
+Epoch 400, Loss: 0.006616984785859343, Neurons: 27
+Epoch 401, Loss: 0.015626601967078713, Neurons: 27
+Epoch 402, Loss: 0.006962635139809442, Neurons: 27
+Epoch 403, Loss: 0.006118730663597997, Neurons: 27
+Epoch 404, Loss: 0.010078357340623704, Neurons: 27
+Epoch 405, Loss: 0.008621904526691697, Neurons: 27
+Epoch 406, Loss: 0.005635784598498468, Neurons: 27
+Epoch 407, Loss: 0.005064259898672824, Neurons: 27
+Epoch 408, Loss: 0.0066910337733227885, Neurons: 27
+Epoch 409, Loss: 0.007416309179960498, Neurons: 27
+Removed neuron to hidden layer 2 at index 13
+network shape updated to :[12, 13, 1]
+Epoch 410, Loss: 0.006600571221098171, Neurons: 26
+Epoch 411, Loss: 0.013563256875361716, Neurons: 26
+Epoch 412, Loss: 0.006462183960557808, Neurons: 26
+Epoch 413, Loss: 0.005385269331645052, Neurons: 26
+Epoch 414, Loss: 0.008681419843428073, Neurons: 26
+Epoch 415, Loss: 0.007629467824082902, Neurons: 26
+Epoch 416, Loss: 0.004981390375874781, Neurons: 26
+Epoch 417, Loss: 0.004699970930380651, Neurons: 26
+Epoch 418, Loss: 0.006303086632641669, Neurons: 26
+Epoch 419, Loss: 0.006583125285269194, Neurons: 26
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[12, 14, 1]
+Epoch 420, Loss: 0.04459712848509735, Neurons: 27
+Epoch 421, Loss: 0.004427718877727701, Neurons: 27
+Epoch 422, Loss: 0.022792992778166495, Neurons: 27
+Epoch 423, Loss: 0.026210743575537935, Neurons: 27
+Epoch 424, Loss: 0.014357010617780792, Neurons: 27
+Epoch 425, Loss: 0.0051073720856360085, Neurons: 27
+Epoch 426, Loss: 0.006632165066060292, Neurons: 27
+Epoch 427, Loss: 0.01317872200358766, Neurons: 27
+Epoch 428, Loss: 0.015163758434027006, Neurons: 27
+Epoch 429, Loss: 0.011075380052284103, Neurons: 27
+Removed neuron to hidden layer 2 at index 13
+network shape updated to :[12, 13, 1]
+Epoch 430, Loss: 0.0224928832264045, Neurons: 26
+Epoch 431, Loss: 0.00798654476434773, Neurons: 26
+Epoch 432, Loss: 0.01573229319438228, Neurons: 26
+Epoch 433, Loss: 0.010712952921710628, Neurons: 26
+Epoch 434, Loss: 0.0061393041045695275, Neurons: 26
+Epoch 435, Loss: 0.0076367100470922265, Neurons: 26
+Epoch 436, Loss: 0.009586540091877187, Neurons: 26
+Epoch 437, Loss: 0.008423198702893644, Neurons: 26
+Epoch 438, Loss: 0.0060748635741413775, Neurons: 26
+Epoch 439, Loss: 0.005459026538568318, Neurons: 26
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[12, 14, 1]
+Epoch 440, Loss: 0.007994093291145424, Neurons: 27
+Epoch 441, Loss: 0.018186283040574458, Neurons: 27
+Epoch 442, Loss: 0.00874049076838798, Neurons: 27
+Epoch 443, Loss: 0.007624003874637675, Neurons: 27
+Epoch 444, Loss: 0.008969414514206945, Neurons: 27
+Epoch 445, Loss: 0.008503019781772888, Neurons: 27
+Epoch 446, Loss: 0.007489351823590291, Neurons: 27
+Epoch 447, Loss: 0.0068360297072196175, Neurons: 27
+Epoch 448, Loss: 0.006243301433555368, Neurons: 27
+Epoch 449, Loss: 0.0054640907274313925, Neurons: 27
+Removed neuron to hidden layer 2 at index 13
+network shape updated to :[12, 13, 1]
+Epoch 450, Loss: 0.005459897298135513, Neurons: 26
+Epoch 451, Loss: 0.01616545576941976, Neurons: 26
+Epoch 452, Loss: 0.00708123167737922, Neurons: 26
+Epoch 453, Loss: 0.005870873042943082, Neurons: 26
+Epoch 454, Loss: 0.008734789934272201, Neurons: 26
+Epoch 455, Loss: 0.00927749835214882, Neurons: 26
+Epoch 456, Loss: 0.006037996904236116, Neurons: 26
+Epoch 457, Loss: 0.003838220579157687, Neurons: 26
+Epoch 458, Loss: 0.004968981070805562, Neurons: 26
+Epoch 459, Loss: 0.006813366563309824, Neurons: 26
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[13, 13, 1]
+Epoch 460, Loss: 0.006663490842991509, Neurons: 27
+Epoch 461, Loss: 0.011165100334532092, Neurons: 27
+Epoch 462, Loss: 0.006638176015418335, Neurons: 27
+Epoch 463, Loss: 0.003808826980566071, Neurons: 27
+Epoch 464, Loss: 0.006770337246082416, Neurons: 27
+Epoch 465, Loss: 0.00698782357215284, Neurons: 27
+Epoch 466, Loss: 0.00462037499306764, Neurons: 27
+Epoch 467, Loss: 0.003606772762091925, Neurons: 27
+Epoch 468, Loss: 0.0047881633591955524, Neurons: 27
+Epoch 469, Loss: 0.0056222725376074215, Neurons: 27
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[13, 14, 1]
+Epoch 470, Loss: 0.009138733390460113, Neurons: 28
+Epoch 471, Loss: 0.022813935922271548, Neurons: 28
+Epoch 472, Loss: 0.00814893413889017, Neurons: 28
+Epoch 473, Loss: 0.006280831561348274, Neurons: 28
+Epoch 474, Loss: 0.013273723763033046, Neurons: 28
+Epoch 475, Loss: 0.011619542728126035, Neurons: 28
+Epoch 476, Loss: 0.00558636702948866, Neurons: 28
+Epoch 477, Loss: 0.0034584267346630076, Neurons: 28
+Epoch 478, Loss: 0.0063609805563668844, Neurons: 28
+Epoch 479, Loss: 0.008836508064268713, Neurons: 28
+Removed neuron to hidden layer 2 at index 13
+network shape updated to :[13, 13, 1]
+Epoch 480, Loss: 0.017377338086725144, Neurons: 27
+Epoch 481, Loss: 0.009306659498482158, Neurons: 27
+Epoch 482, Loss: 0.013183083890806158, Neurons: 27
+Epoch 483, Loss: 0.006713880491945282, Neurons: 27
+Epoch 484, Loss: 0.005130769555137896, Neurons: 27
+Epoch 485, Loss: 0.00785255831840765, Neurons: 27
+Epoch 486, Loss: 0.008131428798684658, Neurons: 27
+Epoch 487, Loss: 0.005544504794750163, Neurons: 27
+Epoch 488, Loss: 0.004071689138311291, Neurons: 27
+Epoch 489, Loss: 0.005208408370258184, Neurons: 27
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[14, 13, 1]
+Epoch 490, Loss: 0.05007804839598703, Neurons: 28
+Epoch 491, Loss: 0.01569709900689427, Neurons: 28
+Epoch 492, Loss: 0.010631935245121288, Neurons: 28
+Epoch 493, Loss: 0.017717393375166056, Neurons: 28
+Epoch 494, Loss: 0.01913619321573604, Neurons: 28
+Epoch 495, Loss: 0.016473808542653904, Neurons: 28
+Epoch 496, Loss: 0.012471255525923035, Neurons: 28
+Epoch 497, Loss: 0.009001912167841158, Neurons: 28
+Epoch 498, Loss: 0.007673374850385593, Neurons: 28
+Epoch 499, Loss: 0.00798983311688652, Neurons: 28
+Removed neuron to hidden layer 1 at index 13
+network shape updated to :[13, 13, 1]
+Epoch 500, Loss: 0.03078293942493393, Neurons: 27
+Epoch 501, Loss: 0.005055390581665602, Neurons: 27
+Epoch 502, Loss: 0.00845012268767469, Neurons: 27
+Epoch 503, Loss: 0.015509929292890075, Neurons: 27
+Epoch 504, Loss: 0.013730868189316821, Neurons: 27
+Epoch 505, Loss: 0.008199520662431216, Neurons: 27
+Epoch 506, Loss: 0.004426606573709787, Neurons: 27
+Epoch 507, Loss: 0.004151809557385614, Neurons: 27
+Epoch 508, Loss: 0.006489706782424671, Neurons: 27
+Epoch 509, Loss: 0.008472404545382173, Neurons: 27
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[14, 13, 1]
+Epoch 510, Loss: 0.008621031003365176, Neurons: 28
+Epoch 511, Loss: 0.007354511739812089, Neurons: 28
+Epoch 512, Loss: 0.011889668610812426, Neurons: 28
+Epoch 513, Loss: 0.004594882646412011, Neurons: 28
+Epoch 514, Loss: 0.005449266443085893, Neurons: 28
+Epoch 515, Loss: 0.006361964467927646, Neurons: 28
+Epoch 516, Loss: 0.005905930324040068, Neurons: 28
+Epoch 517, Loss: 0.005793319944751684, Neurons: 28
+Epoch 518, Loss: 0.004463952823229647, Neurons: 28
+Epoch 519, Loss: 0.003292263595201455, Neurons: 28
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[14, 14, 1]
+Epoch 520, Loss: 0.00405860914398535, Neurons: 29
+Epoch 521, Loss: 0.01491488501068827, Neurons: 29
+Epoch 522, Loss: 0.004345457679914107, Neurons: 29
+Epoch 523, Loss: 0.004815842213119422, Neurons: 29
+Epoch 524, Loss: 0.008812636505923677, Neurons: 29
+Epoch 525, Loss: 0.006967917859560728, Neurons: 29
+Epoch 526, Loss: 0.0034940388612269115, Neurons: 29
+Epoch 527, Loss: 0.0031521283747162243, Neurons: 29
+Epoch 528, Loss: 0.005287447527284125, Neurons: 29
+Epoch 529, Loss: 0.005935381203930005, Neurons: 29
+Removed neuron to hidden layer 2 at index 13
+network shape updated to :[14, 13, 1]
+Epoch 530, Loss: 0.0044824568629780815, Neurons: 28
+Epoch 531, Loss: 0.013165254140730264, Neurons: 28
+Epoch 532, Loss: 0.004523960757883397, Neurons: 28
+Epoch 533, Loss: 0.00392727309777326, Neurons: 28
+Epoch 534, Loss: 0.00769874136368207, Neurons: 28
+Epoch 535, Loss: 0.006208837688726132, Neurons: 28
+Epoch 536, Loss: 0.003166580975254801, Neurons: 28
+Epoch 537, Loss: 0.0030765029807879028, Neurons: 28
+Epoch 538, Loss: 0.004955766878954663, Neurons: 28
+Epoch 539, Loss: 0.005281952830515662, Neurons: 28
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[14, 14, 1]
+Epoch 540, Loss: 0.010388703663681855, Neurons: 29
+Epoch 541, Loss: 0.011595203240286926, Neurons: 29
+Epoch 542, Loss: 0.009102891475434572, Neurons: 29
+Epoch 543, Loss: 0.003631710824539324, Neurons: 29
+Epoch 544, Loss: 0.006363242635699829, Neurons: 29
+Epoch 545, Loss: 0.00840524776411017, Neurons: 29
+Epoch 546, Loss: 0.00589911611105946, Neurons: 29
+Epoch 547, Loss: 0.003696108575583152, Neurons: 29
+Epoch 548, Loss: 0.003170025785638893, Neurons: 29
+Epoch 549, Loss: 0.0038134466585660865, Neurons: 29
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[14, 15, 1]
+Epoch 550, Loss: 0.004993790446124134, Neurons: 30
+Epoch 551, Loss: 0.00970673038476131, Neurons: 30
+Epoch 552, Loss: 0.005462382074978576, Neurons: 30
+Epoch 553, Loss: 0.0032932425710531826, Neurons: 30
+Epoch 554, Loss: 0.00466438297728641, Neurons: 30
+Epoch 555, Loss: 0.005066527624989622, Neurons: 30
+Epoch 556, Loss: 0.004132317297290929, Neurons: 30
+Epoch 557, Loss: 0.0033587960273455046, Neurons: 30
+Epoch 558, Loss: 0.0032158499920754537, Neurons: 30
+Epoch 559, Loss: 0.0031210259940256334, Neurons: 30
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[14, 16, 1]
+Epoch 560, Loss: 0.0040136738152666, Neurons: 31
+Epoch 561, Loss: 0.01347928085653803, Neurons: 31
+Epoch 562, Loss: 0.012411895119629016, Neurons: 31
+Epoch 563, Loss: 0.005560850024135272, Neurons: 31
+Epoch 564, Loss: 0.005435005420462521, Neurons: 31
+Epoch 565, Loss: 0.008950357598529262, Neurons: 31
+Epoch 566, Loss: 0.00790138662027565, Neurons: 31
+Epoch 567, Loss: 0.005410538750866515, Neurons: 31
+Epoch 568, Loss: 0.004396341298589512, Neurons: 31
+Epoch 569, Loss: 0.004376671368589323, Neurons: 31
+Removed neuron to hidden layer 2 at index 15
+network shape updated to :[14, 15, 1]
+Epoch 570, Loss: 0.004581095333817777, Neurons: 30
+Epoch 571, Loss: 0.013128745512085255, Neurons: 30
+Epoch 572, Loss: 0.004813777047438841, Neurons: 30
+Epoch 573, Loss: 0.0031449526085495635, Neurons: 30
+Epoch 574, Loss: 0.007295768093923462, Neurons: 30
+Epoch 575, Loss: 0.0062684744549656385, Neurons: 30
+Epoch 576, Loss: 0.003193003896646184, Neurons: 30
+Epoch 577, Loss: 0.002445902175603669, Neurons: 30
+Epoch 578, Loss: 0.004310519764867729, Neurons: 30
+Epoch 579, Loss: 0.005022648168750198, Neurons: 30
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[14, 16, 1]
+Epoch 580, Loss: 0.005621278589061453, Neurons: 31
+Epoch 581, Loss: 0.012810258789185453, Neurons: 31
+Epoch 582, Loss: 0.005423832341662801, Neurons: 31
+Epoch 583, Loss: 0.004731518807358484, Neurons: 31
+Epoch 584, Loss: 0.006223715428221216, Neurons: 31
+Epoch 585, Loss: 0.005972252689472042, Neurons: 31
+Epoch 586, Loss: 0.005081816511673061, Neurons: 31
+Epoch 587, Loss: 0.003962781122049439, Neurons: 31
+Epoch 588, Loss: 0.0034375355489950853, Neurons: 31
+Epoch 589, Loss: 0.0034645787639172717, Neurons: 31
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[15, 16, 1]
+Epoch 590, Loss: 0.26745947854996716, Neurons: 32
+Epoch 591, Loss: 0.08888037293353343, Neurons: 32
+Epoch 592, Loss: 0.08081592858381788, Neurons: 32
+Epoch 593, Loss: 0.08151075910783405, Neurons: 32
+Epoch 594, Loss: 0.05419929850623479, Neurons: 32
+Epoch 595, Loss: 0.03094247753585113, Neurons: 32
+Epoch 596, Loss: 0.03570409801717791, Neurons: 32
+Epoch 597, Loss: 0.053837357294469354, Neurons: 32
+Epoch 598, Loss: 0.0610454717627287, Neurons: 32
+Epoch 599, Loss: 0.05322335449803028, Neurons: 32
+Removed neuron to hidden layer 1 at index 14
+network shape updated to :[14, 16, 1]
+Epoch 600, Loss: 0.12698850206008055, Neurons: 31
+Epoch 601, Loss: 0.05120442396391633, Neurons: 31
+Epoch 602, Loss: 0.009887021919928525, Neurons: 31
+Epoch 603, Loss: 0.003858234243408643, Neurons: 31
+Epoch 604, Loss: 0.01985845137236224, Neurons: 31
+Epoch 605, Loss: 0.0330613866162171, Neurons: 31
+Epoch 606, Loss: 0.03579118505706052, Neurons: 31
+Epoch 607, Loss: 0.030417900519887815, Neurons: 31
+Epoch 608, Loss: 0.021025312803002707, Neurons: 31
+Epoch 609, Loss: 0.011427107943240148, Neurons: 31
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[15, 16, 1]
+Epoch 610, Loss: 0.005119266507352409, Neurons: 32
+Epoch 611, Loss: 0.012346593001060512, Neurons: 32
+Epoch 612, Loss: 0.008460254955572115, Neurons: 32
+Epoch 613, Loss: 0.005820613291078365, Neurons: 32
+Epoch 614, Loss: 0.0055825929474657985, Neurons: 32
+Epoch 615, Loss: 0.0065640991883257225, Neurons: 32
+Epoch 616, Loss: 0.004333144149219752, Neurons: 32
+Epoch 617, Loss: 0.0029662249619967413, Neurons: 32
+Epoch 618, Loss: 0.00423147825843445, Neurons: 32
+Epoch 619, Loss: 0.0050775536265958, Neurons: 32
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[15, 17, 1]
+Epoch 620, Loss: 0.02184851077373279, Neurons: 33
+Epoch 621, Loss: 0.020030236546862243, Neurons: 33
+Epoch 622, Loss: 0.01442814821723422, Neurons: 33
+Epoch 623, Loss: 0.005376124845788899, Neurons: 33
+Epoch 624, Loss: 0.009771031485386836, Neurons: 33
+Epoch 625, Loss: 0.013496547718995793, Neurons: 33
+Epoch 626, Loss: 0.009204433970921752, Neurons: 33
+Epoch 627, Loss: 0.0035225244516271497, Neurons: 33
+Epoch 628, Loss: 0.0033205451934114195, Neurons: 33
+Epoch 629, Loss: 0.007055326869964168, Neurons: 33
+Removed neuron to hidden layer 2 at index 16
+network shape updated to :[15, 16, 1]
+Epoch 630, Loss: 0.024804495353128713, Neurons: 32
+Epoch 631, Loss: 0.006545837510076535, Neurons: 32
+Epoch 632, Loss: 0.01838311179103413, Neurons: 32
+Epoch 633, Loss: 0.011377362123361654, Neurons: 32
+Epoch 634, Loss: 0.00336461187344441, Neurons: 32
+Epoch 635, Loss: 0.005348165143191348, Neurons: 32
+Epoch 636, Loss: 0.009821303726344243, Neurons: 32
+Epoch 637, Loss: 0.00854622668050731, Neurons: 32
+Epoch 638, Loss: 0.004204189426948675, Neurons: 32
+Epoch 639, Loss: 0.0025051927750223443, Neurons: 32
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[16, 16, 1]
+Epoch 640, Loss: 1.0538546876030754, Neurons: 33
+Epoch 641, Loss: 0.7019157508407553, Neurons: 33
+Epoch 642, Loss: 0.45301243724191803, Neurons: 33
+Epoch 643, Loss: 0.3065149556108176, Neurons: 33
+Epoch 644, Loss: 0.23339346292635782, Neurons: 33
+Epoch 645, Loss: 0.21427394769836208, Neurons: 33
+Epoch 646, Loss: 0.21518909737032207, Neurons: 33
+Epoch 647, Loss: 0.22362609003974632, Neurons: 33
+Epoch 648, Loss: 0.2230433985908155, Neurons: 33
+Epoch 649, Loss: 0.2142265393707027, Neurons: 33
+Removed neuron to hidden layer 1 at index 15
+network shape updated to :[15, 16, 1]
+Epoch 650, Loss: 0.48872949733467064, Neurons: 32
+Epoch 651, Loss: 0.31931653093482054, Neurons: 32
+Epoch 652, Loss: 0.1994675753033745, Neurons: 32
+Epoch 653, Loss: 0.1149197774890769, Neurons: 32
+Epoch 654, Loss: 0.059658245964154526, Neurons: 32
+Epoch 655, Loss: 0.02891491935813415, Neurons: 32
+Epoch 656, Loss: 0.021821350301297567, Neurons: 32
+Epoch 657, Loss: 0.03652384632627946, Neurons: 32
+Epoch 658, Loss: 0.06050566233850262, Neurons: 32
+Epoch 659, Loss: 0.07772151668992833, Neurons: 32
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[16, 16, 1]
+Epoch 660, Loss: 0.13434032532687734, Neurons: 33
+Epoch 661, Loss: 0.4390915748472116, Neurons: 33
+Epoch 662, Loss: 0.10793844615230985, Neurons: 33
+Epoch 663, Loss: 0.1215389906076346, Neurons: 33
+Epoch 664, Loss: 0.23803051197389272, Neurons: 33
+Epoch 665, Loss: 0.1651539024182262, Neurons: 33
+Epoch 666, Loss: 0.060571685859927754, Neurons: 33
+Epoch 667, Loss: 0.06446624148581202, Neurons: 33
+Epoch 668, Loss: 0.12760844689431552, Neurons: 33
+Epoch 669, Loss: 0.1340293275773757, Neurons: 33
+Removed neuron to hidden layer 1 at index 15
+network shape updated to :[15, 16, 1]
+Epoch 670, Loss: 0.04698339710865601, Neurons: 32
+Epoch 671, Loss: 0.014967548350108101, Neurons: 32
+Epoch 672, Loss: 0.007218369147640094, Neurons: 32
+Epoch 673, Loss: 0.013332664634378088, Neurons: 32
+Epoch 674, Loss: 0.017491248831779608, Neurons: 32
+Epoch 675, Loss: 0.016468794876943364, Neurons: 32
+Epoch 676, Loss: 0.01265100261227258, Neurons: 32
+Epoch 677, Loss: 0.008394771291464589, Neurons: 32
+Epoch 678, Loss: 0.005759798892213724, Neurons: 32
+Epoch 679, Loss: 0.005226489811744255, Neurons: 32
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[16, 16, 1]
+Epoch 680, Loss: 0.008083199073227996, Neurons: 33
+Epoch 681, Loss: 0.015308685291590698, Neurons: 33
+Epoch 682, Loss: 0.009536558048910624, Neurons: 33
+Epoch 683, Loss: 0.006259412606941468, Neurons: 33
+Epoch 684, Loss: 0.007560157718847652, Neurons: 33
+Epoch 685, Loss: 0.008029425497131322, Neurons: 33
+Epoch 686, Loss: 0.006211624306946632, Neurons: 33
+Epoch 687, Loss: 0.0048816959176550935, Neurons: 33
+Epoch 688, Loss: 0.0050339874571051855, Neurons: 33
+Epoch 689, Loss: 0.005305509840575715, Neurons: 33
+Removed neuron to hidden layer 1 at index 15
+network shape updated to :[15, 16, 1]
+Epoch 690, Loss: 0.011842037087400843, Neurons: 32
+Epoch 691, Loss: 0.005186776012185102, Neurons: 32
+Epoch 692, Loss: 0.01109583734681343, Neurons: 32
+Epoch 693, Loss: 0.0073470116758336795, Neurons: 32
+Epoch 694, Loss: 0.004797046409225072, Neurons: 32
+Epoch 695, Loss: 0.004267190227948856, Neurons: 32
+Epoch 696, Loss: 0.005754632649402124, Neurons: 32
+Epoch 697, Loss: 0.006437726650522816, Neurons: 32
+Epoch 698, Loss: 0.005238651231712947, Neurons: 32
+Epoch 699, Loss: 0.004060711741951281, Neurons: 32
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[16, 16, 1]
+Epoch 700, Loss: 0.004024754603499411, Neurons: 33
+Epoch 701, Loss: 0.03401085134959263, Neurons: 33
+Epoch 702, Loss: 0.005443337712908452, Neurons: 33
+Epoch 703, Loss: 0.011030520030489958, Neurons: 33
+Epoch 704, Loss: 0.02004853217394079, Neurons: 33
+Epoch 705, Loss: 0.012122829110103943, Neurons: 33
+Epoch 706, Loss: 0.003770152969928971, Neurons: 33
+Epoch 707, Loss: 0.00460072629969387, Neurons: 33
+Epoch 708, Loss: 0.009817742526412354, Neurons: 33
+Epoch 709, Loss: 0.011370425479750649, Neurons: 33
+Removed neuron to hidden layer 1 at index 15
+network shape updated to :[15, 16, 1]
+Epoch 710, Loss: 0.008331127923578742, Neurons: 32
+Epoch 711, Loss: 0.01982809499690592, Neurons: 32
+Epoch 712, Loss: 0.006612858585746338, Neurons: 32
+Epoch 713, Loss: 0.0042692771679936365, Neurons: 32
+Epoch 714, Loss: 0.010443747204033094, Neurons: 32
+Epoch 715, Loss: 0.009192649145317408, Neurons: 32
+Epoch 716, Loss: 0.00420413237055765, Neurons: 32
+Epoch 717, Loss: 0.003192024544003117, Neurons: 32
+Epoch 718, Loss: 0.006190506598973583, Neurons: 32
+Epoch 719, Loss: 0.007177724835051109, Neurons: 32
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[15, 17, 1]
+Epoch 720, Loss: 0.004870236845140469, Neurons: 33
+Epoch 721, Loss: 0.025228665380688773, Neurons: 33
+Epoch 722, Loss: 0.005992614205816162, Neurons: 33
+Epoch 723, Loss: 0.006328945489784303, Neurons: 33
+Epoch 724, Loss: 0.014173757402309925, Neurons: 33
+Epoch 725, Loss: 0.00942656139290966, Neurons: 33
+Epoch 726, Loss: 0.0032912659791026672, Neurons: 33
+Epoch 727, Loss: 0.004154442111936875, Neurons: 33
+Epoch 728, Loss: 0.008050945516489995, Neurons: 33
+Epoch 729, Loss: 0.00845340392171765, Neurons: 33
+Removed neuron to hidden layer 2 at index 16
+network shape updated to :[15, 16, 1]
+Epoch 730, Loss: 0.005402629715822326, Neurons: 32
+Epoch 731, Loss: 0.024812947284419438, Neurons: 32
+Epoch 732, Loss: 0.005147630772655356, Neurons: 32
+Epoch 733, Loss: 0.006211217220016017, Neurons: 32
+Epoch 734, Loss: 0.013627769966498903, Neurons: 32
+Epoch 735, Loss: 0.010721520685348786, Neurons: 32
+Epoch 736, Loss: 0.004335353414370906, Neurons: 32
+Epoch 737, Loss: 0.003111449319196672, Neurons: 32
+Epoch 738, Loss: 0.006895138542167553, Neurons: 32
+Epoch 739, Loss: 0.008631306728228004, Neurons: 32
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[15, 17, 1]
+Epoch 740, Loss: 0.08823968161121942, Neurons: 33
+Epoch 741, Loss: 0.019341743132095954, Neurons: 33
+Epoch 742, Loss: 0.023860716249294818, Neurons: 33
+Epoch 743, Loss: 0.03174190896171861, Neurons: 33
+Epoch 744, Loss: 0.02288936835485992, Neurons: 33
+Epoch 745, Loss: 0.012775018645339899, Neurons: 33
+Epoch 746, Loss: 0.011274846336463853, Neurons: 33
+Epoch 747, Loss: 0.0155767787488689, Neurons: 33
+Epoch 748, Loss: 0.01888270772191757, Neurons: 33
+Epoch 749, Loss: 0.017738353028188557, Neurons: 33
+Removed neuron to hidden layer 2 at index 16
+network shape updated to :[15, 16, 1]
+Epoch 750, Loss: 0.07427944042617929, Neurons: 32
+Epoch 751, Loss: 0.025298166494116554, Neurons: 32
+Epoch 752, Loss: 0.013976204377443083, Neurons: 32
+Epoch 753, Loss: 0.013236223825007762, Neurons: 32
+Epoch 754, Loss: 0.0150584549075667, Neurons: 32
+Epoch 755, Loss: 0.01970858596866338, Neurons: 32
+Epoch 756, Loss: 0.02323690428083846, Neurons: 32
+Epoch 757, Loss: 0.020878307247350045, Neurons: 32
+Epoch 758, Loss: 0.014486594125770183, Neurons: 32
+Epoch 759, Loss: 0.0081698719679579, Neurons: 32
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[16, 16, 1]
+Epoch 760, Loss: 0.25641918294410493, Neurons: 33
+Epoch 761, Loss: 0.23997947229191735, Neurons: 33
+Epoch 762, Loss: 0.2249810458481551, Neurons: 33
+Epoch 763, Loss: 0.20948689347638952, Neurons: 33
+Epoch 764, Loss: 0.1945462320415787, Neurons: 33
+Epoch 765, Loss: 0.1816793624701439, Neurons: 33
+Epoch 766, Loss: 0.17232239784805886, Neurons: 33
+Epoch 767, Loss: 0.1667037689653244, Neurons: 33
+Epoch 768, Loss: 0.1629162256915636, Neurons: 33
+Epoch 769, Loss: 0.15828220143315352, Neurons: 33
+Removed neuron to hidden layer 1 at index 15
+network shape updated to :[15, 16, 1]
+Epoch 770, Loss: 0.413376843997184, Neurons: 32
+Epoch 771, Loss: 0.27228868401367395, Neurons: 32
+Epoch 772, Loss: 0.17861922623428536, Neurons: 32
+Epoch 773, Loss: 0.12977678936146134, Neurons: 32
+Epoch 774, Loss: 0.10061561401015826, Neurons: 32
+Epoch 775, Loss: 0.07479653922948623, Neurons: 32
+Epoch 776, Loss: 0.054014856592442796, Neurons: 32
+Epoch 777, Loss: 0.04567663752582315, Neurons: 32
+Epoch 778, Loss: 0.0505373954041266, Neurons: 32
+Epoch 779, Loss: 0.05879346247871004, Neurons: 32
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[15, 17, 1]
+Epoch 780, Loss: 0.0555778620361642, Neurons: 33
+Epoch 781, Loss: 0.05231754168938986, Neurons: 33
+Epoch 782, Loss: 0.02792091581254455, Neurons: 33
+Epoch 783, Loss: 0.024081908183744016, Neurons: 33
+Epoch 784, Loss: 0.023423030401711318, Neurons: 33
+Epoch 785, Loss: 0.015633613408098036, Neurons: 33
+Epoch 786, Loss: 0.011946819958648103, Neurons: 33
+Epoch 787, Loss: 0.012409900678509849, Neurons: 33
+Epoch 788, Loss: 0.010771165760330815, Neurons: 33
+Epoch 789, Loss: 0.006540016157561679, Neurons: 33
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[16, 17, 1]
+Epoch 790, Loss: 0.0035798338516522463, Neurons: 34
+Epoch 791, Loss: 0.014461715588134551, Neurons: 34
+Epoch 792, Loss: 0.01129198572654506, Neurons: 34
+Epoch 793, Loss: 0.005840426862250573, Neurons: 34
+Epoch 794, Loss: 0.005732770163915976, Neurons: 34
+Epoch 795, Loss: 0.009583241323613602, Neurons: 34
+Epoch 796, Loss: 0.007235646649978392, Neurons: 34
+Epoch 797, Loss: 0.002661602085913067, Neurons: 34
+Epoch 798, Loss: 0.002316868789845792, Neurons: 34
+Epoch 799, Loss: 0.005170716676875035, Neurons: 34
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[16, 18, 1]
+Epoch 800, Loss: 0.005827188053241418, Neurons: 35
+Epoch 801, Loss: 0.018399210156755736, Neurons: 35
+Epoch 802, Loss: 0.007077781197691859, Neurons: 35
+Epoch 803, Loss: 0.008245057623221582, Neurons: 35
+Epoch 804, Loss: 0.006082038081463044, Neurons: 35
+Epoch 805, Loss: 0.0037501553144402076, Neurons: 35
+Epoch 806, Loss: 0.005897373562105241, Neurons: 35
+Epoch 807, Loss: 0.006979970323306658, Neurons: 35
+Epoch 808, Loss: 0.004653682654193675, Neurons: 35
+Epoch 809, Loss: 0.002179679607506734, Neurons: 35
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[16, 19, 1]
+Epoch 810, Loss: 0.011337594109393494, Neurons: 36
+Epoch 811, Loss: 0.03819930960898528, Neurons: 36
+Epoch 812, Loss: 0.007972680057567523, Neurons: 36
+Epoch 813, Loss: 0.008478716979046327, Neurons: 36
+Epoch 814, Loss: 0.020316402115821173, Neurons: 36
+Epoch 815, Loss: 0.015219507865007892, Neurons: 36
+Epoch 816, Loss: 0.005385917290027733, Neurons: 36
+Epoch 817, Loss: 0.0030195316910769394, Neurons: 36
+Epoch 818, Loss: 0.007223892438086761, Neurons: 36
+Epoch 819, Loss: 0.01024510990980664, Neurons: 36
+Removed neuron to hidden layer 2 at index 18
+network shape updated to :[16, 18, 1]
+Epoch 820, Loss: 0.012068783311996402, Neurons: 35
+Epoch 821, Loss: 0.019733805544899872, Neurons: 35
+Epoch 822, Loss: 0.008813491080776581, Neurons: 35
+Epoch 823, Loss: 0.0027763740964888584, Neurons: 35
+Epoch 824, Loss: 0.008426641257429505, Neurons: 35
+Epoch 825, Loss: 0.009105679754129325, Neurons: 35
+Epoch 826, Loss: 0.004293921680301401, Neurons: 35
+Epoch 827, Loss: 0.0018492537753099835, Neurons: 35
+Epoch 828, Loss: 0.0040068939691227665, Neurons: 35
+Epoch 829, Loss: 0.005898792626302233, Neurons: 35
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[17, 18, 1]
+Epoch 830, Loss: 0.003948024493547146, Neurons: 36
+Epoch 831, Loss: 0.021936839534606525, Neurons: 36
+Epoch 832, Loss: 0.007329505088670143, Neurons: 36
+Epoch 833, Loss: 0.008471868385377519, Neurons: 36
+Epoch 834, Loss: 0.007784640664938037, Neurons: 36
+Epoch 835, Loss: 0.006526932008843398, Neurons: 36
+Epoch 836, Loss: 0.007301613555981268, Neurons: 36
+Epoch 837, Loss: 0.006151535779834416, Neurons: 36
+Epoch 838, Loss: 0.003675094842708849, Neurons: 36
+Epoch 839, Loss: 0.0029023414994935985, Neurons: 36
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[18, 18, 1]
+Epoch 840, Loss: 0.04933589188345939, Neurons: 37
+Epoch 841, Loss: 0.05431415003665308, Neurons: 37
+Epoch 842, Loss: 0.031017074953747538, Neurons: 37
+Epoch 843, Loss: 0.017851558246321824, Neurons: 37
+Epoch 844, Loss: 0.02633513621227007, Neurons: 37
+Epoch 845, Loss: 0.022537285002982247, Neurons: 37
+Epoch 846, Loss: 0.012963713112648238, Neurons: 37
+Epoch 847, Loss: 0.011551771044593814, Neurons: 37
+Epoch 848, Loss: 0.01495886299330255, Neurons: 37
+Epoch 849, Loss: 0.014812610186274777, Neurons: 37
+Removed neuron to hidden layer 1 at index 17
+network shape updated to :[17, 18, 1]
+Epoch 850, Loss: 0.013960022321689238, Neurons: 36
+Epoch 851, Loss: 0.018935825056883373, Neurons: 36
+Epoch 852, Loss: 0.008222911459386322, Neurons: 36
+Epoch 853, Loss: 0.003141879745337996, Neurons: 36
+Epoch 854, Loss: 0.009116117063440338, Neurons: 36
+Epoch 855, Loss: 0.010455715727979499, Neurons: 36
+Epoch 856, Loss: 0.006013880914190093, Neurons: 36
+Epoch 857, Loss: 0.0026656757893605094, Neurons: 36
+Epoch 858, Loss: 0.0036423485239938597, Neurons: 36
+Epoch 859, Loss: 0.005466247192339359, Neurons: 36
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[17, 19, 1]
+Epoch 860, Loss: 0.130334345227825, Neurons: 37
+Epoch 861, Loss: 0.021684428282008127, Neurons: 37
+Epoch 862, Loss: 0.021044542426705008, Neurons: 37
+Epoch 863, Loss: 0.04275689510250713, Neurons: 37
+Epoch 864, Loss: 0.0459203972542555, Neurons: 37
+Epoch 865, Loss: 0.033840028710269345, Neurons: 37
+Epoch 866, Loss: 0.02095231239354203, Neurons: 37
+Epoch 867, Loss: 0.016408142342326883, Neurons: 37
+Epoch 868, Loss: 0.01835844186872667, Neurons: 37
+Epoch 869, Loss: 0.020073901874561435, Neurons: 37
+Removed neuron to hidden layer 2 at index 18
+network shape updated to :[17, 18, 1]
+Epoch 870, Loss: 0.03581307444586527, Neurons: 36
+Epoch 871, Loss: 0.006086412691167033, Neurons: 36
+Epoch 872, Loss: 0.011070902230282705, Neurons: 36
+Epoch 873, Loss: 0.016004608171223015, Neurons: 36
+Epoch 874, Loss: 0.011167326465692583, Neurons: 36
+Epoch 875, Loss: 0.0049942440934344036, Neurons: 36
+Epoch 876, Loss: 0.0037125344946444066, Neurons: 36
+Epoch 877, Loss: 0.006534965635104946, Neurons: 36
+Epoch 878, Loss: 0.008904129023914471, Neurons: 36
+Epoch 879, Loss: 0.008441442007792486, Neurons: 36
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[17, 19, 1]
+Epoch 880, Loss: 0.005738306993608008, Neurons: 37
+Epoch 881, Loss: 0.0124420402480591, Neurons: 37
+Epoch 882, Loss: 0.009090444505791858, Neurons: 37
+Epoch 883, Loss: 0.004693598652587172, Neurons: 37
+Epoch 884, Loss: 0.004625823685323688, Neurons: 37
+Epoch 885, Loss: 0.007070738214080017, Neurons: 37
+Epoch 886, Loss: 0.00652060061836599, Neurons: 37
+Epoch 887, Loss: 0.0033434176317856073, Neurons: 37
+Epoch 888, Loss: 0.0018557752163834507, Neurons: 37
+Epoch 889, Loss: 0.0032743290842781533, Neurons: 37
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[18, 19, 1]
+Epoch 890, Loss: 0.005451173570546853, Neurons: 38
+Epoch 891, Loss: 0.010864570272184012, Neurons: 38
+Epoch 892, Loss: 0.0045919214228689305, Neurons: 38
+Epoch 893, Loss: 0.0022771153528661154, Neurons: 38
+Epoch 894, Loss: 0.005517113149070087, Neurons: 38
+Epoch 895, Loss: 0.005565606234047127, Neurons: 38
+Epoch 896, Loss: 0.002828319640141589, Neurons: 38
+Epoch 897, Loss: 0.0014847449867094662, Neurons: 38
+Epoch 898, Loss: 0.002739514340992283, Neurons: 38
+Epoch 899, Loss: 0.003904519537592963, Neurons: 38
+Removed neuron to hidden layer 1 at index 17
+network shape updated to :[17, 19, 1]
+Epoch 900, Loss: 0.0032820020630712926, Neurons: 37
+Epoch 901, Loss: 0.01255887828201882, Neurons: 37
+Epoch 902, Loss: 0.0037427098511452123, Neurons: 37
+Epoch 903, Loss: 0.002302142572883881, Neurons: 37
+Epoch 904, Loss: 0.006815942549927275, Neurons: 37
+Epoch 905, Loss: 0.005103953830254459, Neurons: 37
+Epoch 906, Loss: 0.0018074855441342, Neurons: 37
+Epoch 907, Loss: 0.0016437901618922637, Neurons: 37
+Epoch 908, Loss: 0.003433016746103, Neurons: 37
+Epoch 909, Loss: 0.004013631950705755, Neurons: 37
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[18, 19, 1]
+Epoch 910, Loss: 0.0026066583849171316, Neurons: 38
+Epoch 911, Loss: 0.014066895827025422, Neurons: 38
+Epoch 912, Loss: 0.0027325531530502673, Neurons: 38
+Epoch 913, Loss: 0.002937281308143132, Neurons: 38
+Epoch 914, Loss: 0.007406240104345601, Neurons: 38
+Epoch 915, Loss: 0.005531529985455322, Neurons: 38
+Epoch 916, Loss: 0.0017979923958244448, Neurons: 38
+Epoch 917, Loss: 0.0013485468647608688, Neurons: 38
+Epoch 918, Loss: 0.0036365019860105188, Neurons: 38
+Epoch 919, Loss: 0.0043425646656804024, Neurons: 38
+Removed neuron to hidden layer 1 at index 17
+network shape updated to :[17, 19, 1]
+Epoch 920, Loss: 0.0027152735419372427, Neurons: 37
+Epoch 921, Loss: 0.013060900543289091, Neurons: 37
+Epoch 922, Loss: 0.0029479141104418833, Neurons: 37
+Epoch 923, Loss: 0.0023510012106499768, Neurons: 37
+Epoch 924, Loss: 0.006751537885555735, Neurons: 37
+Epoch 925, Loss: 0.00492384961462049, Neurons: 37
+Epoch 926, Loss: 0.0014526795396590142, Neurons: 37
+Epoch 927, Loss: 0.0013669699588581441, Neurons: 37
+Epoch 928, Loss: 0.003509915113978801, Neurons: 37
+Epoch 929, Loss: 0.0038605844669782393, Neurons: 37
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[18, 19, 1]
+Epoch 930, Loss: 0.6962182874295143, Neurons: 38
+Epoch 931, Loss: 0.09097446265216619, Neurons: 38
+Epoch 932, Loss: 0.47317963777232025, Neurons: 38
+Epoch 933, Loss: 0.3192416878050961, Neurons: 38
+Epoch 934, Loss: 0.06730914468887937, Neurons: 38
+Epoch 935, Loss: 0.06272497565187998, Neurons: 38
+Epoch 936, Loss: 0.20056805951043694, Neurons: 38
+Epoch 937, Loss: 0.23199527380525248, Neurons: 38
+Epoch 938, Loss: 0.1348641408038177, Neurons: 38
+Epoch 939, Loss: 0.037621693581127304, Neurons: 38
+Removed neuron to hidden layer 1 at index 17
+network shape updated to :[17, 19, 1]
+Epoch 940, Loss: 0.010379369202029387, Neurons: 37
+Epoch 941, Loss: 0.01721849125218592, Neurons: 37
+Epoch 942, Loss: 0.008943033079431064, Neurons: 37
+Epoch 943, Loss: 0.005387261230930168, Neurons: 37
+Epoch 944, Loss: 0.00771957581378523, Neurons: 37
+Epoch 945, Loss: 0.00733410003004821, Neurons: 37
+Epoch 946, Loss: 0.004973566718330929, Neurons: 37
+Epoch 947, Loss: 0.003944927876152592, Neurons: 37
+Epoch 948, Loss: 0.004520162774587915, Neurons: 37
+Epoch 949, Loss: 0.004586408186493845, Neurons: 37
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[18, 19, 1]
+Epoch 950, Loss: 0.0031908528271656386, Neurons: 38
+Epoch 951, Loss: 0.02877212576571199, Neurons: 38
+Epoch 952, Loss: 0.0033309348784046114, Neurons: 38
+Epoch 953, Loss: 0.005675928075555802, Neurons: 38
+Epoch 954, Loss: 0.014791865122268, Neurons: 38
+Epoch 955, Loss: 0.012460102514085993, Neurons: 38
+Epoch 956, Loss: 0.005042257499313045, Neurons: 38
+Epoch 957, Loss: 0.0017270996107324518, Neurons: 38
+Epoch 958, Loss: 0.004623020390795054, Neurons: 38
+Epoch 959, Loss: 0.007688673946333383, Neurons: 38
+Removed neuron to hidden layer 1 at index 17
+network shape updated to :[17, 19, 1]
+Epoch 960, Loss: 0.006497597350601718, Neurons: 37
+Epoch 961, Loss: 0.016348068626195107, Neurons: 37
+Epoch 962, Loss: 0.007274711131485737, Neurons: 37
+Epoch 963, Loss: 0.0015177900112216607, Neurons: 37
+Epoch 964, Loss: 0.007415744025864213, Neurons: 37
+Epoch 965, Loss: 0.00770651357324187, Neurons: 37
+Epoch 966, Loss: 0.0026967729653059095, Neurons: 37
+Epoch 967, Loss: 0.001300723580809113, Neurons: 37
+Epoch 968, Loss: 0.004007030514839256, Neurons: 37
+Epoch 969, Loss: 0.005323278431036575, Neurons: 37
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[18, 19, 1]
+Epoch 970, Loss: 0.14481513072004823, Neurons: 38
+Epoch 971, Loss: 0.12191942838125477, Neurons: 38
+Epoch 972, Loss: 0.09362949548067481, Neurons: 38
+Epoch 973, Loss: 0.061479079445405364, Neurons: 38
+Epoch 974, Loss: 0.040975190425781106, Neurons: 38
+Epoch 975, Loss: 0.03998270651460072, Neurons: 38
+Epoch 976, Loss: 0.04677423046743985, Neurons: 38
+Epoch 977, Loss: 0.04653188943393423, Neurons: 38
+Epoch 978, Loss: 0.039984912547240146, Neurons: 38
+Epoch 979, Loss: 0.03353862408147204, Neurons: 38
+Removed neuron to hidden layer 1 at index 17
+network shape updated to :[17, 19, 1]
+Epoch 980, Loss: 0.05249367114675836, Neurons: 37
+Epoch 981, Loss: 0.014852108540694886, Neurons: 37
+Epoch 982, Loss: 0.0099130551114351, Neurons: 37
+Epoch 983, Loss: 0.014097960546824327, Neurons: 37
+Epoch 984, Loss: 0.01692737718538441, Neurons: 37
+Epoch 985, Loss: 0.013538973532489581, Neurons: 37
+Epoch 986, Loss: 0.00817732435521482, Neurons: 37
+Epoch 987, Loss: 0.004370099545778455, Neurons: 37
+Epoch 988, Loss: 0.0030056478371275537, Neurons: 37
+Epoch 989, Loss: 0.003919270229472405, Neurons: 37
+Added neuron to hidden layer 1 with activation relu
+network shape updated to :[18, 19, 1]
+Epoch 990, Loss: 0.004358975493193544, Neurons: 38
+Epoch 991, Loss: 0.01609478794630805, Neurons: 38
+Epoch 992, Loss: 0.009230264103364864, Neurons: 38
+Epoch 993, Loss: 0.009642227290579862, Neurons: 38
+Epoch 994, Loss: 0.003824986480385509, Neurons: 38
+Epoch 995, Loss: 0.0033719541968448706, Neurons: 38
+Epoch 996, Loss: 0.006739704135798334, Neurons: 38
+Epoch 997, Loss: 0.005594424345694206, Neurons: 38
+Epoch 998, Loss: 0.002744824462401252, Neurons: 38
+Epoch 999, Loss: 0.0025130398522699824, Neurons: 38
+Added neuron to hidden layer 2 with activation relu
+network shape updated to :[18, 20, 1]

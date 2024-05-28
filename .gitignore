@@ -1,3 +1,7 @@
 /env
 /output
+*/output
 /figures
+*/figures
+/wandb
+*/wandb
