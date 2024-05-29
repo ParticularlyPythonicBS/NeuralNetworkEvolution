@@ -14,7 +14,7 @@ class Neuron(eqx.Module):
     A simple neuron with a weight vector, bias, and activation function.
     """
     weight: jax.Array
-    bias: jax.Array
+    # bias: jax.Array
     activation: callable
 
     def __init__(self, in_features, activation=jax.nn.relu, key=None):
@@ -26,12 +26,12 @@ class Neuron(eqx.Module):
         # self.weight = jax.random.normal(w_key, (in_features,))
         # self.bias = jax.random.normal(b_key, ())
         self.weight = jax.random.uniform(w_key, (in_features,), minval=-lim, maxval=lim)
-        self.bias = jax.random.uniform(b_key, (), minval=-lim, maxval=lim)
+        # self.bias = jax.random.uniform(b_key, (), minval=-lim, maxval=lim)
 
         self.activation = activation
 
     def __call__(self, x):
-        return self.activation(jnp.dot(self.weight, x) + self.bias)
+        return self.activation(jnp.dot(self.weight, x)) # + self.bias)
     
     def importance(self):
         """
