@@ -28,16 +28,16 @@ class CustomMLP(eqx.Module):
         output_size = MLPConfig.output_size
         hidden_sizes = MLPConfig.hidden_sizes
         activation_list = MLPConfig.initial_activation_list
+        bias = MLPConfig.bias
         key = jax.random.PRNGKey(MLPConfig.seed)
         keys = jax.random.split(key, len(hidden_sizes) + 1)
         act_key = jax.random.split(keys[-1], 1)[0]
-
         layers = []
         in_features = input_size
 
         # Create hidden layers
         for i, out_features in enumerate(hidden_sizes):
-            layer = [Neuron(in_features, activation_list[jax.random.choice(key, jnp.arange(len(activation_list)))], key=key) 
+            layer = [Neuron(in_features, activation_list[jax.random.choice(key, jnp.arange(len(activation_list)))], bias= bias, key=key) 
                         for i, key in enumerate(jax.random.split(act_key, out_features))]
             layers.append(layer)
             in_features = out_features
@@ -53,11 +53,11 @@ class CustomMLP(eqx.Module):
             x = jnp.array([neuron(x) for neuron in layer])
         return x
 
-    def add_neuron(self, layer_index, activation=jax.nn.relu, key=None):
+    def add_neuron(self, layer_index, activation=jax.nn.relu, bias = False, key=None):
         if key is None:
             key = jax.random.PRNGKey(0)
         in_features = self.layers[layer_index][0].weight.shape[0]
-        new_neuron = Neuron(in_features, activation, key)
+        new_neuron = Neuron(in_features, activation, bias, key)
         self.layers[layer_index].append(new_neuron)
 
         # Adjust the next layer's weight matrix to include the new neuron

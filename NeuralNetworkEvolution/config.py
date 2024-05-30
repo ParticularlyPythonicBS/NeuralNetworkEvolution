@@ -15,19 +15,20 @@ class MLPConfig:
     hidden_sizes: list
     output_size: int
     initial_activation_list: list
+    bias: bool = False
 
     def save(self, filename):
         # Replace functions in activation_list with their names
         activation_names = [f.__name__ for f in self.initial_activation_list]
         with open(filename, 'wb') as f:
             pickle.dump((self.seed, self.input_size, self.hidden_sizes,
-                        self.output_size, activation_names), f)
+                        self.output_size, activation_names, self.bias), f)
     
     @classmethod
     def load(cls, filename, activation_functions):
         # Map function names back to actual functions
         name_to_function = {f.__name__: f for f in activation_functions}
         with open(filename, 'rb') as f:
-            seed, input_size, hidden_sizes, output_size, activation_names = pickle.load(f)
+            seed, input_size, hidden_sizes, output_size, activation_names, bias = pickle.load(f)
         initial_activation_list = [name_to_function[name] for name in activation_names]
-        return cls(seed, input_size, hidden_sizes, output_size, initial_activation_list)
+        return cls(seed, input_size, hidden_sizes, output_size, initial_activation_list, bias)
