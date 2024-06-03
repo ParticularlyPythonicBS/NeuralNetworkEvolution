@@ -24,7 +24,7 @@ initial_activation_list = [jax.nn.relu, jax.nn.tanh, sin]
 activation_list = [jax.nn.relu, jax.nn.tanh, sin]
 bias = False
 num_epochs = 1000
-add_node_every = 200
+add_node_every = 50
 threshold = 1e-4
 n_samples = 2000
 learning_rate = 0.01
@@ -131,6 +131,11 @@ for run in range(NUM_RUNS):
 
     final_adjacency_matrix = mlp.adjacency_matrix()
     np.savetxt(f"{run_output_folder}/final_adjacency_matrix.txt", final_adjacency_matrix)
-
+    final_shape = mlp.get_shape()
+    np.savetxt(f"{run_output_folder}/final_shape.txt", final_shape)
+    
     eqx.clear_caches()
     jax.clear_caches()
+
+np.savetxt(f"{out_folder}/threshold_history.txt", threshold_history)
+np.savetxt(f"{out_folder}/first_removal_history.txt", First_removal_history)

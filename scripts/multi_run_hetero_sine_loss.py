@@ -24,7 +24,7 @@ initial_activation_list = [jax.nn.relu, jax.nn.tanh, sin]
 activation_list = [jax.nn.relu, jax.nn.tanh, sin]
 bias = False
 num_epochs = 1000
-add_node_every = 200
+add_node_every = 50
 threshold = 1e-4
 n_samples = 2000
 learning_rate = 0.01
@@ -117,7 +117,7 @@ for run in range(NUM_RUNS):
         if (epoch + 1) % add_node_every == 0:
 
             #add criterion
-            if len(Update_history) == 0 or Update_history[-1][2] > loss:
+            if len(Update_history) == 0 or Update_history[-1][2] > loss or Update_history[-1][3] == "removed":
                 # if no previous addition or last addition was rejected, add a neuron
                 # if last addition was accepted, add a neuron
                 add_key, act_key = jax.random.split(add_key)
@@ -140,6 +140,11 @@ for run in range(NUM_RUNS):
                 layer_key, neuron_key, sub_key = jax.random.split(sub_key,3)
                 layer = Update_history[-1][4]
                 neuron_idx = len(mlp.layers[layer]) -1
+
+                if len(mlp.layers[layer]) <= 1:
+                    logging.info(f"Cannot remove neuron from layer {layer+1}, only one neuron left")
+                    Update_history.append((epoch, n_neurons, loss, "single_node_layer", layer))
+                    continue
 
                 mlp.remove_neuron(layer_index=layer, neuron_index=neuron_idx)
                 opt_state = initialize_optimizer_state(mlp, opt)
@@ -172,6 +177,11 @@ for run in range(NUM_RUNS):
 
     final_adjacency_matrix = mlp.adjacency_matrix()
     np.savetxt(f"{run_output_folder}/final_adjacency_matrix.txt", final_adjacency_matrix)
-
+    final_shape = mlp.get_shape()
+    np.savetxt(f"{run_output_folder}/final_shape.txt", final_shape)
+    
     eqx.clear_caches()
     jax.clear_caches()
+
+np.savetxt(f"{out_folder}/threshold_history.txt", threshold_history)
+np.savetxt(f"{out_folder}/first_removal_history.txt", First_removal_history)
