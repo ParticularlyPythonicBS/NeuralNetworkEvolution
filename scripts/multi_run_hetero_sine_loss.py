@@ -18,12 +18,12 @@ jax.config.update('jax_platform_name', 'cpu')
 NUM_RUNS = 50
 
 input_size = 1
-hidden_sizes = [5, 5] 
+hidden_sizes = [10, 10] 
 output_size = 1
 initial_activation_list = [jax.nn.relu, jax.nn.tanh, sin]
 activation_list = [jax.nn.relu, jax.nn.tanh, sin]
 bias = False
-num_epochs = 1000
+num_epochs = 3000
 add_node_every = 50
 threshold = 1e-4
 n_samples = 2000
@@ -72,11 +72,14 @@ def train_step(mlp, x, y, opt_state, opt_update):
     mlp = eqx.apply_updates(mlp, updates)
     return loss, mlp, opt_state
 
-x = jnp.linspace(0, 2*jnp.pi, n_samples).reshape(-1, 1)
-y = jnp.sin(x)
+def poly(x):
+    return (x - 3)*(x - 2)*(x - 1)*x*(x + 1)*(x + 2)*(x + 3)
 
-x_test = jnp.linspace(0, 2* jnp.pi, 100).reshape(-1, 1)
-y_test = jnp.sin(x_test)
+x = jnp.linspace(-3, 3, n_samples).reshape(-1, 1)
+y = poly(x)
+
+x_test = jnp.linspace(-3, 3, 100).reshape(-1, 1)
+y_test = poly(x_test)
 
 First_removal_history = []
 threshold_history= []
