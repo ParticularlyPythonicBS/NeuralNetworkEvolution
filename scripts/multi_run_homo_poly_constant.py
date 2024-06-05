@@ -18,7 +18,7 @@ jax.config.update('jax_platform_name', 'cpu')
 NUM_RUNS = 50
 
 input_size = 1
-hidden_sizes = [5, 5] 
+hidden_sizes = [10, 10] 
 output_size = 1
 initial_activation_list = [sin]
 activation_list = [sin]
@@ -43,7 +43,7 @@ config.__dict__.update({'n_samples': n_samples,
                         'threshold': threshold,
                         'activation_list': activation_list})
 
-Description = f"Homo_sine_no_strat__no_bias_{hidden_sizes[0]}_{hidden_sizes[1]}_{num_epochs}_{add_node_every}_{threshold}_runs_{NUM_RUNS}"
+Description = f"Homo_poly_no_strat__no_bias_{hidden_sizes[0]}_{hidden_sizes[1]}_{num_epochs}_{add_node_every}_{threshold}_runs_{NUM_RUNS}"
 fig_folder = f"../figures/{Description}"
 out_folder = f"../output/{Description}"
 os.makedirs(fig_folder, exist_ok=True)
@@ -72,11 +72,14 @@ def train_step(mlp, x, y, opt_state, opt_update):
     mlp = eqx.apply_updates(mlp, updates)
     return loss, mlp, opt_state
 
-x = jnp.linspace(0, 2*jnp.pi, n_samples).reshape(-1, 1)
-y = jnp.sin(x)
+def poly(x):
+    return (x - 3)*(x - 2)*(x - 1)*x*(x + 1)*(x + 2)*(x + 3)
 
-x_test = jnp.linspace(0, 2* jnp.pi, 100).reshape(-1, 1)
-y_test = jnp.sin(x_test)
+x = jnp.linspace(-3, 3, n_samples).reshape(-1, 1)
+y = poly(x)
+
+x_test = jnp.linspace(-3, 3, 100).reshape(-1, 1)
+y_test = poly(x_test)
 
 First_removal_history = []
 threshold_history= []
@@ -133,7 +136,7 @@ for run in range(NUM_RUNS):
     np.savetxt(f"{run_output_folder}/final_adjacency_matrix.txt", final_adjacency_matrix)
     final_shape = mlp.get_shape()
     np.savetxt(f"{run_output_folder}/final_shape.txt", final_shape)
-
+    
     eqx.clear_caches()
     jax.clear_caches()
 
