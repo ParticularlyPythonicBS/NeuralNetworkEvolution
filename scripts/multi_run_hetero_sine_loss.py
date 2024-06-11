@@ -13,23 +13,23 @@ import sys
 import logging
 
 jax.config.update("jax_enable_x64", True)
-jax.config.update('jax_platform_name', 'cpu')
+# jax.config.update('jax_platform_name', 'cpu')
 
 NUM_RUNS = 50
 
 input_size = 1
-hidden_sizes = [10, 10] 
+hidden_sizes = [5, 5] 
 output_size = 1
-initial_activation_list = [jax.nn.relu, jax.nn.tanh, sin]
-activation_list = [jax.nn.relu, jax.nn.tanh, sin]
+initial_activation_list = [jax.nn.relu, jax.nn.tanh]
+activation_list = [jax.nn.relu, jax.nn.tanh]
 bias = False
-num_epochs = 10000
+num_epochs = 3000
 add_node_every = 50
 threshold = 1e-4
 n_samples = 2000
 learning_rate = 0.01
 start_seed = 0
-
+act_string = "_".join([act.__name__ for act in initial_activation_list])
 config = MLPConfig(input_size=input_size,
                 output_size=output_size,
                 hidden_sizes=hidden_sizes,
@@ -43,7 +43,7 @@ config.__dict__.update({'n_samples': n_samples,
                         'threshold': threshold,
                         'activation_list': activation_list})
 
-Description = f"Hetero_sine_loss_strat__no_bias_{hidden_sizes[0]}_{hidden_sizes[1]}_{num_epochs}_{add_node_every}_{threshold}_runs_{NUM_RUNS}"
+Description = f"Hetero_{act_string}_sine_loss_strat__no_bias_{hidden_sizes[0]}_{hidden_sizes[1]}_{num_epochs}_{add_node_every}_{threshold}_runs_{NUM_RUNS}"
 fig_folder = f"../figures/{Description}"
 out_folder = f"../output/{Description}"
 os.makedirs(fig_folder, exist_ok=True)
@@ -72,14 +72,12 @@ def train_step(mlp, x, y, opt_state, opt_update):
     mlp = eqx.apply_updates(mlp, updates)
     return loss, mlp, opt_state
 
-def poly(x):
-    return (x - 3)*(x - 2)*(x - 1)*x*(x + 1)*(x + 2)*(x + 3)
 
-x = jnp.linspace(-3, 3, n_samples).reshape(-1, 1)
-y = poly(x)
+x = jnp.linspace(0, 2*jnp.pi, n_samples).reshape(-1, 1)
+y = jnp.sin(x)
 
-x_test = jnp.linspace(-3, 3, 100).reshape(-1, 1)
-y_test = poly(x_test)
+x_test = jnp.linspace(0, 2* jnp.pi, 100).reshape(-1, 1)
+y_test = jnp.sin(x_test)
 
 First_removal_history = []
 threshold_history= []

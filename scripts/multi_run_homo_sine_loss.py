@@ -23,7 +23,7 @@ output_size = 1
 initial_activation_list = [sin]
 activation_list = [sin]
 bias = False
-num_epochs = 10000
+num_epochs = 3000
 add_node_every = 50
 threshold = 1e-4
 n_samples = 2000
@@ -43,7 +43,7 @@ config.__dict__.update({'n_samples': n_samples,
                         'threshold': threshold,
                         'activation_list': activation_list})
 
-Description = f"Homo_sine_loss_strat__no_bias_{hidden_sizes[0]}_{hidden_sizes[1]}_{num_epochs}_{add_node_every}_{threshold}_runs_{NUM_RUNS}"
+Description = f"Homo_{activation_list[0].__name__}_sine_loss_strat__no_bias_{hidden_sizes[0]}_{hidden_sizes[1]}_{num_epochs}_{add_node_every}_{threshold}_runs_{NUM_RUNS}"
 fig_folder = f"../figures/{Description}"
 out_folder = f"../output/{Description}"
 os.makedirs(fig_folder, exist_ok=True)

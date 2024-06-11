@@ -12,7 +12,7 @@ class Model(eqx.Module):
 
     def __call__(self, x):
         for layer in self.layers[:-1]:
-            x = jax.nn.relu(layer(x))
+            x = jax.nn.tanh(layer(x))
         return self.layers[-1](x)
 
 # %% ../nbs/Examples/classic_mlp_sine_cos.ipynb 5
@@ -28,7 +28,9 @@ def MLP(layer_sizes, key):
 @eqx.filter_value_and_grad()
 def compute_loss(params, x, y):
     preds = jax.vmap(params)(x)
-    return jnp.mean((preds - y) ** 2)
+    mse = jnp.mean((preds - y) ** 2)
+    nrmse = jnp.sqrt(mse) / jnp.std(y)
+    return mse
 
 # %% ../nbs/Examples/classic_mlp_sine_cos.ipynb 7
 @eqx.filter_jit

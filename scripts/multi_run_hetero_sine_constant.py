@@ -20,16 +20,16 @@ NUM_RUNS = 50
 input_size = 1
 hidden_sizes = [5, 5] 
 output_size = 1
-initial_activation_list = [jax.nn.relu, jax.nn.tanh, sin]
-activation_list = [jax.nn.relu, jax.nn.tanh, sin]
+initial_activation_list = [jax.nn.relu, jax.nn.tanh]
+activation_list = [jax.nn.relu, jax.nn.tanh]
 bias = False
-num_epochs = 10000
+num_epochs = 3000 
 add_node_every = 50
 threshold = 1e-4
 n_samples = 2000
 learning_rate = 0.01
 start_seed = 0
-
+act_string = "_".join([act.__name__ for act in initial_activation_list])
 config = MLPConfig(input_size=input_size,
                 output_size=output_size,
                 hidden_sizes=hidden_sizes,
@@ -43,7 +43,7 @@ config.__dict__.update({'n_samples': n_samples,
                         'threshold': threshold,
                         'activation_list': activation_list})
 
-Description = f"Hetero_sine_no_strat__no_bias_{hidden_sizes[0]}_{hidden_sizes[1]}_{num_epochs}_{add_node_every}_{threshold}_runs_{NUM_RUNS}"
+Description = f"Hetero_{act_string}_sine_no_strat__no_bias_{hidden_sizes[0]}_{hidden_sizes[1]}_{num_epochs}_{add_node_every}_{threshold}_runs_{NUM_RUNS}"
 fig_folder = f"../figures/{Description}"
 out_folder = f"../output/{Description}"
 os.makedirs(fig_folder, exist_ok=True)
