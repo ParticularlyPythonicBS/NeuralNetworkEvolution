@@ -16,7 +16,7 @@ import logging
 # jax.config.update("jax_enable_x64", True)
 # jax.config.update('jax_platform_name', 'cpu')
 
-NUM_RUNS = 50
+NUM_RUNS = 10
 
 input_size = 1
 hidden_sizes = [5, 5] 
@@ -150,47 +150,47 @@ for run in range(NUM_RUNS):
             logging.info(f"Epoch {epoch :03d}, Test loss: {test_loss.item()}")
             test_loss_history.append((epoch,test_loss))
 
-        # Neuron Addition criteria
-        if (len(update_history) == 0    # if no previous addition
-            or update_history[-1][3] > test_loss # if last addition was accepted
-            or    (update_history[-1][-2] == "removed" and update_history[-2][-2] == "removed" )): # if two removals in a row
+            # Neuron Addition criteria
+            if (len(update_history) == 0    # if no previous addition
+                or update_history[-1][3] > test_loss # if last addition was accepted
+                or    (update_history[-1][-2] == "removed" and update_history[-2][-2] == "removed" )): # if two removals in a row
 
-            add_key, act_key = jax.random.split(add_key)
-            activation = activation_list[jax.random.choice(key, jnp.arange(len(activation_list)))]
-            layers = len(mlp.get_shape()) - 1
-            layer = jax.random.randint(act_key, (1,), 0, layers)[0] # randomly select a layer to add neuron to
-            mlp.add_neuron(layer_index=layer, activation=activation, bias = bias, key=add_key)
-            opt_state = initialize_optimizer_state(mlp, opt)
+                add_key, act_key = jax.random.split(add_key)
+                activation = activation_list[jax.random.choice(key, jnp.arange(len(activation_list)))]
+                layers = len(mlp.get_shape()) - 1
+                layer = jax.random.randint(act_key, (1,), 0, layers)[0] # randomly select a layer to add neuron to
+                mlp.add_neuron(layer_index=layer, activation=activation, bias = bias, key=add_key)
+                opt_state = initialize_optimizer_state(mlp, opt)
 
-            update_history.append((epoch, n_neurons, train_loss, test_loss, activation.__name__, layer))
-            logging.info(f"Added neuron to hidden layer {layer+1} with activation {activation.__name__}")
-            logging.info(f"network shape updated to :{mlp.get_shape()}")
-        
-        # Neuron Removal criteria
-        elif ((update_history[-1][-2] == "removed" and update_history[-2][3] < test_loss) # if last addition was removed check loss against value before that
-            or (update_history[-1][-2] != "removed" and update_history[-1][3] < test_loss)): # if loss is worse than last accepted addition, reject it
-
-            layer_key, neuron_key, sub_key = jax.random.split(sub_key,3)
-            layer = update_history[-1][-1] # get the layer of last addition
-            neuron_idx = len(mlp.layers[layer]) -1
-
-            if len(mlp.layers[layer]) <= 1:
-                logging.info(f"Cannot remove neuron from layer {layer+1}, only one neuron left")
-                update_history.append((epoch, n_neurons, train_loss, test_loss, "single_node_layer", layer))
-                continue
-
-            mlp.remove_neuron(layer_index=layer, neuron_index=neuron_idx)
-            opt_state = initialize_optimizer_state(mlp, opt)
-            update_history.append((epoch, n_neurons, train_loss, test_loss, "removed", layer))
+                update_history.append((epoch, n_neurons, train_loss, test_loss, activation.__name__, layer))
+                logging.info(f"Added neuron to hidden layer {layer+1} with activation {activation.__name__}")
+                logging.info(f"network shape updated to :{mlp.get_shape()}")
             
-            if not removed_neurons:
-                First_removal_history.append((epoch, n_neurons, train_loss, test_loss))
-                removed_neurons = True
-                logging.info(f"First neuron removed at epoch {epoch} with network size {n_neurons} and test loss {test_loss}")
+            # Neuron Removal criteria
+            elif ((update_history[-1][-2] == "removed" and update_history[-2][3] < test_loss) # if last addition was removed check loss against value before that
+                or (update_history[-1][-2] != "removed" and update_history[-1][3] < test_loss)): # if loss is worse than last accepted addition, reject it
 
-            logging.info(f"Removed neuron to hidden layer {layer+1} at index {neuron_idx}")
-            logging.info(f"network shape updated to :{mlp.get_shape()}")
-    
+                layer_key, neuron_key, sub_key = jax.random.split(sub_key,3)
+                layer = update_history[-1][-1] # get the layer of last addition
+                neuron_idx = len(mlp.layers[layer]) -1
+
+                if len(mlp.layers[layer]) <= 1:
+                    logging.info(f"Cannot remove neuron from layer {layer+1}, only one neuron left")
+                    update_history.append((epoch, n_neurons, train_loss, test_loss, "single_node_layer", layer))
+                    continue
+
+                mlp.remove_neuron(layer_index=layer, neuron_index=neuron_idx)
+                opt_state = initialize_optimizer_state(mlp, opt)
+                update_history.append((epoch, n_neurons, train_loss, test_loss, "removed", layer))
+                
+                if not removed_neurons:
+                    First_removal_history.append((epoch, n_neurons, train_loss, test_loss))
+                    removed_neurons = True
+                    logging.info(f"First neuron removed at epoch {epoch} with network size {n_neurons} and test loss {test_loss}")
+
+                logging.info(f"Removed neuron to hidden layer {layer+1} at index {neuron_idx}")
+                logging.info(f"network shape updated to :{mlp.get_shape()}")
+        
     if not threshold_reached:
         logging.info(f"Threshold not reached, stopping training at epoch {epoch}")
         threshold_history.append(epoch)
