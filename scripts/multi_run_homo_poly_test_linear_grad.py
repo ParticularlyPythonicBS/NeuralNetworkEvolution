@@ -144,6 +144,9 @@ for run in range(NUM_RUNS):
             logging.info(f"Gradient norm below threshold, stopping training at epoch {epoch}")
             break
 
+        key, add_key, sub_key = jax.random.split(key,3)
+
+
         if ((epoch + 1) % intervene_every*int(n_neurons/init_neurons) == 0 # scale intervention period linearly with number of neurons
             or grad_norm_val < grad_norm_threshold) and epoch!=num_epochs-1: # intervene if gradient norm is below threshold, but not at last epoch
             test_loss = test_step(mlp, x_test, y_test)
