@@ -13,6 +13,7 @@ jobs:
         os:  [ubuntu, macos]
         version: ["3.10", "3.11"]
     runs-on: ${{ matrix.os }}-latest
+    steps:
       - uses: fastai/workflows/nbdev-ci@master
         with:
           version: ${{ matrix.version }}
