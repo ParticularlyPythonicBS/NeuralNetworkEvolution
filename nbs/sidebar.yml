@@ -1,0 +1,50 @@
+website:
+  sidebar:
+    contents:
+      - index.ipynb
+      - 00_core.ipynb
+      - 01_neuron.ipynb
+      - 02_activations.ipynb
+      - 03_MLP.ipynb
+      - config.ipynb
+      - section: Examples
+        contents:
+          - Examples/01_homo_rand_strat.ipynb
+          - Examples/02_hetero_rand_strat.ipynb
+          - Examples/03_homo_loss_strat.ipynb
+          - Examples/04_hetero_loss_strat.ipynb
+          - Examples/05_homo_weight_strat.ipynb
+          - Examples/06_hetero_weight_strat.ipynb
+          - Examples/07_homo_sine_loss_strat.ipynb
+          - Examples/08_hetero_sine_loss_strat.ipynb
+          - Examples/09_homo_sine_weight_strat.ipynb
+          - Examples/10_hetero_sine_weight_strat.ipynb
+          - Examples/11_homo_sine_loss_strat_pruning.ipynb
+          - Examples/12_homo_sine_weight_strat_pruning.ipynb
+          - Examples/13_homo_poly_loss_strat.ipynb
+          - Examples/14_hetero_poly_loss_strat.ipynb
+          - Examples/15_homo_poly_weight_strat.ipynb
+          - Examples/16_hetero_poly_weight_strat.ipynb
+          - Examples/17_homo_attractor_no_strat.ipynb
+          - Examples/18_homo_poly_test_strat.ipynb
+          - Examples/19_hetero_poly_test_strat.ipynb
+          - Examples/20_homo_poly_test_linear_grad_strat.ipynb
+          - Examples/21_hetero_poly_test_linear_grad_strat.ipynb
+          - Examples/classic_mlp_sine_cos.ipynb
+          - Examples/homo_sine_no_strat.ipynb
+          - section: failed
+            contents:
+              - Examples/failed/11_homo_sine_grad_strat.ipynb
+      - section: analysis
+        contents:
+          - analysis/analysis.ipynb
+      - section: prototyping
+        contents:
+          - prototyping/prototyping_nodal_activation_hetero.ipynb
+          - prototyping/prototyping_nodal_activation_hetero_loss_strat.ipynb
+          - prototyping/prototyping_nodal_activation_hetero_weight_strat.ipynb
+          - prototyping/prototyping_nodal_activation_homo.ipynb
+          - prototyping/prototyping_nodal_activation_homo_loss_strat.ipynb
+          - prototyping/prototyping_nodal_activation_homo_weight_strat.ipynb
+          - prototyping/prototyping_node_changes.ipynb
+          - prototyping/prototyping_vmap_nodes.ipynb
