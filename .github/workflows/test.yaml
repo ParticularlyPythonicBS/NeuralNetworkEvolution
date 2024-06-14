@@ -13,12 +13,6 @@ jobs:
         os:  [ubuntu, macos]
         version: ["3.10", "3.11"]
     runs-on: ${{ matrix.os }}-latest
-    steps:
-      - name: Install TeX Live
-        uses: zauguin/install-texlive@v3
-        with:
-          packages: >
-            l3build latex latex-bin luatex latex-bin-dev
       - uses: fastai/workflows/nbdev-ci@master
         with:
           version: ${{ matrix.version }}

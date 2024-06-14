@@ -19,7 +19,7 @@ from .neuron import Neuron
 from .activations import identity
 from .config import MLPConfig
 
-# %% ../nbs/03_MLP.ipynb 5
+# %% ../nbs/03_MLP.ipynb 4
 class CustomMLP(eqx.Module):
     layers: list
 
@@ -147,7 +147,7 @@ class CustomMLP(eqx.Module):
 
         return G, neuron_labels, neuron_importances
 
-# %% ../nbs/03_MLP.ipynb 7
+# %% ../nbs/03_MLP.ipynb 6
 def mlp_plot(G, neuron_labels, neuron_importances):
     """ 
     Visualizes the MLP as a directed graph using the networkx library.
