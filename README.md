@@ -5,6 +5,21 @@
 This file will become your README and also the index of your
 documentation.
 
+## Dev Notes
+
+You can install the package by
+
+`pip install -e '.[dev]'`
+
+The `.[dev]` makes it also install the dependencies for development.
+
+`-e` makes it install in editable mode so you can make changes to the
+code and see them reflected in the package.
+
+To add commits and submit PRs, also install pre-commit with
+`pip install pre-commit` and run `pre-commit install` to install the git
+hooks.
+
 ## Install
 
 ``` sh
