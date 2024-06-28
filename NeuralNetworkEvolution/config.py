@@ -6,6 +6,8 @@ __all__ = ['MLPConfig']
 # %% ../nbs/config.ipynb 2
 import pickle
 from dataclasses import dataclass
+from .activations import identity
+
 
 # %% ../nbs/config.ipynb 3
 @dataclass
@@ -15,20 +17,23 @@ class MLPConfig:
     hidden_sizes: list
     output_size: int
     initial_activation_list: list
+    last_activation: callable = identity
     bias: bool = False
 
     def save(self, filename):
         # Replace functions in activation_list with their names
         activation_names = [f.__name__ for f in self.initial_activation_list]
+        last_activation_name = self.last_activation.__name__
         with open(filename, 'wb') as f:
             pickle.dump((self.seed, self.input_size, self.hidden_sizes,
-                        self.output_size, activation_names, self.bias), f)
+                        self.output_size, activation_names, last_activation_name, self.bias), f)
     
     @classmethod
     def load(cls, filename, activation_functions):
         # Map function names back to actual functions
         name_to_function = {f.__name__: f for f in activation_functions}
         with open(filename, 'rb') as f:
-            seed, input_size, hidden_sizes, output_size, activation_names, bias = pickle.load(f)
+            seed, input_size, hidden_sizes, output_size, activation_names, last_activation_name, bias = pickle.load(f)
         initial_activation_list = [name_to_function[name] for name in activation_names]
-        return cls(seed, input_size, hidden_sizes, output_size, initial_activation_list, bias)
+        last_activation = name_to_function[last_activation_name]
+        return cls(seed, input_size, hidden_sizes, output_size, initial_activation_list, last_activation, bias)

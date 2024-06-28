@@ -28,6 +28,7 @@ class CustomMLP(eqx.Module):
         output_size = MLPConfig.output_size
         hidden_sizes = MLPConfig.hidden_sizes
         activation_list = MLPConfig.initial_activation_list
+        last_activation = MLPConfig.last_activation
         bias = MLPConfig.bias
         key = jax.random.PRNGKey(MLPConfig.seed)
         keys = jax.random.split(key, len(hidden_sizes) + 1)
@@ -43,7 +44,7 @@ class CustomMLP(eqx.Module):
             in_features = out_features
 
         # Create output layer
-        output_layer = [Neuron(in_features, activation=identity, key=keys[-1]) for _ in range(output_size)]
+        output_layer = [Neuron(in_features, activation=last_activation, key=keys[-1]) for _ in range(output_size)]
         layers.append(output_layer)
 
         self.layers = layers
