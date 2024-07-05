@@ -12,19 +12,19 @@ import networkx as nx
 import matplotlib.pyplot as plt
 from matplotlib.colors import Normalize
 from matplotlib.cm import ScalarMappable
-import matplotlib.style as mplstyle
-import seaborn as sns
 
 from .neuron import Neuron
 from .activations import identity
 from .config import MLPConfig
 
-# %% ../nbs/03_MLP.ipynb 4
+# %% ../nbs/03_MLP.ipynb 5
 class CustomMLP(eqx.Module):
+    input_size: int
     layers: list
 
+
     def __init__(self, MLPConfig: MLPConfig):
-        input_size = MLPConfig.input_size
+        self.input_size = MLPConfig.input_size
         output_size = MLPConfig.output_size
         hidden_sizes = MLPConfig.hidden_sizes
         activation_list = MLPConfig.initial_activation_list
@@ -34,8 +34,8 @@ class CustomMLP(eqx.Module):
         keys = jax.random.split(key, len(hidden_sizes) + 1)
         act_key = jax.random.split(keys[-1], 1)[0]
         layers = []
-        in_features = input_size
 
+        in_features = self.input_size
         # Create hidden layers
         for i, out_features in enumerate(hidden_sizes):
             layer = [Neuron(in_features, activation_list[jax.random.choice(key, jnp.arange(len(activation_list)))], bias= bias, key=key) 
@@ -109,34 +109,41 @@ class CustomMLP(eqx.Module):
         return most_important_layer_index
     
     def adjacency_matrix(self):
-        num_neurons = sum(len(layer) for layer in self.layers)
+        network_shape = [self.input_size] + self.get_shape()
+        num_neurons = sum(network_shape)
         adjacency_matrix = np.zeros((num_neurons, num_neurons))
-        
-        neuron_index = 0
-        for layer_index, layer in enumerate(self.layers[:-1]):
-            next_layer_index = neuron_index + len(layer)
+        neuron_index = self.input_size # Skip the input since it has no incoming connections
+        for layer_index, layer in enumerate(self.layers):
+            past_layer_index = neuron_index - network_shape[layer_index] # Index of the first neuron of the previous layer
             for i, neuron in enumerate(layer):
-                for j in range(len(self.layers[layer_index + 1])):
-                    weight = self.layers[layer_index + 1][j].weight[i]
-                    adjacency_matrix[neuron_index + i, next_layer_index + j] = weight
-            neuron_index = next_layer_index
-        
+                weights = neuron.weight
+                for j in range(len(weights)):
+                    weight = weights[j]
+                    adjacency_matrix[past_layer_index+j, neuron_index + i] = weight
+            neuron_index = neuron_index + len(layer)
+
         return adjacency_matrix
-    
+
     def visualize_graph(self):
         adj_matrix = self.adjacency_matrix()
         G = nx.DiGraph()
 
-        neuron_index = 0
         neuron_labels = {}
         neuron_importances = []
+
+        # create input layer:
+        for i in range(self.input_size):
+            G.add_node(i, subset=0)
+            neuron_labels[i] = (0, 'input')
+            neuron_importances.append(0)
+        
+        neuron_index = self.input_size
 
         for layer_index, layer in enumerate(self.layers):
             for i, neuron in enumerate(layer):
                 neuron_id = neuron_index + i
-                G.add_node(neuron_id, subset=layer_index)
-                # Use the name of the activation function for the label
-                neuron_labels[neuron_id] = (layer_index,neuron.activation.__name__)
+                G.add_node(neuron_id, subset=layer_index+1)
+                neuron_labels[neuron_id] = (layer_index+1,neuron.activation.__name__)
                 neuron_importances.append(neuron.importance().item())
 
             neuron_index += len(layer)
@@ -148,7 +155,7 @@ class CustomMLP(eqx.Module):
 
         return G, neuron_labels, neuron_importances
 
-# %% ../nbs/03_MLP.ipynb 6
+# %% ../nbs/03_MLP.ipynb 7
 def mlp_plot(G, neuron_labels, neuron_importances):
     """ 
     Visualizes the MLP as a directed graph using the networkx library.
