@@ -3,6 +3,8 @@ import numpy as np
 import jax.numpy as jnp
 import equinox as eqx
 import optax
+from sklearn.model_selection import train_test_split
+
 
 from NeuralNetworkEvolution.config import MLPConfig
 from NeuralNetworkEvolution.activations import sin
@@ -18,17 +20,22 @@ jax.config.update('jax_platform_name', 'cpu')
 NUM_RUNS = 50
 
 input_size = 1
-hidden_sizes = [10, 10] 
+hidden_sizes = [15, 15] 
+min_neurons = 60
 output_size = 1
 initial_activation_list = [jax.nn.relu, jax.nn.tanh, sin]
 activation_list = [jax.nn.relu, jax.nn.tanh, sin]
+optimizer = optax.adabelief
 bias = False
-num_epochs = 10000
-add_node_every = 50
-threshold = 1e-4
-n_samples = 2000
-learning_rate = 0.01
+num_epochs = 25000
+intervene_every = 100
 start_seed = 0
+threshold = 1e-4
+grad_norm_threshold = 1e-3
+n_samples = 20000
+test_size = 0.2
+learning_rate = 3e-4
+act_string = "_".join([act.__name__ for act in initial_activation_list])
 
 config = MLPConfig(input_size=input_size,
                 output_size=output_size,
@@ -39,11 +46,11 @@ config = MLPConfig(input_size=input_size,
 config.__dict__.update({'n_samples': n_samples,
                         'learning_rate': learning_rate,
                         'num_epochs': num_epochs,
-                        'add_node_every': add_node_every,
+                        'intervene_every': intervene_every,
                         'threshold': threshold,
                         'activation_list': activation_list})
 
-Description = f"Hetero_poly_no_strat__no_bias_{hidden_sizes[0]}_{hidden_sizes[1]}_{num_epochs}_{add_node_every}_{threshold}_runs_{NUM_RUNS}"
+Description = f"Hetero_{act_string}_poly_no_strat_{optimizer.__name__}_no_bias_min_{min_neurons}_{hidden_sizes[0]}_{hidden_sizes[1]}_{num_epochs}_{intervene_every}_{threshold}_runs_{NUM_RUNS}"
 fig_folder = f"../figures/{Description}"
 out_folder = f"../output/{Description}"
 os.makedirs(fig_folder, exist_ok=True)
@@ -72,14 +79,21 @@ def train_step(mlp, x, y, opt_state, opt_update):
     mlp = eqx.apply_updates(mlp, updates)
     return loss, mlp, opt_state
 
+@eqx.filter_jit()
+def test_step(mlp, x, y):
+    return compute_loss(mlp, x, y)[0]
+
+def grad_norm(grads):
+    return jnp.sqrt(sum(jnp.sum(jnp.square(p)) for p in jax.tree_util.tree_leaves(grads)))
+
 def poly(x):
     return (x - 3)*(x - 2)*(x - 1)*x*(x + 1)*(x + 2)*(x + 3)
 
 x = jnp.linspace(-3, 3, n_samples).reshape(-1, 1)
 y = poly(x)
 
-x_test = jnp.linspace(-3, 3, 100).reshape(-1, 1)
-y_test = poly(x_test)
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=start_seed)
+
 
 First_removal_history = []
 threshold_history= []
@@ -93,41 +107,62 @@ for run in range(NUM_RUNS):
     key = jax.random.PRNGKey(config.seed)
     key = jax.random.split(key, 1)[0]
     mlp = CustomMLP(config)
-    opt = optax.adabelief(learning_rate=learning_rate)
+    init_neurons = sum(mlp.get_shape())
+    opt = optimizer(learning_rate=learning_rate)
     opt_state = initialize_optimizer_state(mlp, opt)
 
     initial_adjacency_matrix = mlp.adjacency_matrix()
     np.savetxt(f"{run_output_folder}/initial_adjacency_matrix.txt", initial_adjacency_matrix)
 
-    Loss_history = []
-    Node_history = []
-    Update_history = []
+    train_loss_history = []
+    test_loss_history = []
+    node_history = []
+    grad_norm_history = []
+    graph_history = []
+    update_history = []
+
+    test_loss = np.inf # initialize test loss to infinity
+    check_loss = np.inf # initialize check loss to infinity
     threshold_reached = False
     removed_neurons = False
     
 
     for epoch in range(num_epochs):
-        loss, mlp, opt_state = train_step(mlp, x, y, opt_state, opt.update)
-
-        key, add_key, sub_key = jax.random.split(key,3)
+        train_loss, mlp, opt_state = train_step(mlp, x_train, y_train, opt_state, opt.update)
+        _, grads  = compute_loss(mlp, x_train, y_train)
+        grad_norm_val = grad_norm(grads)
         n_neurons = sum(mlp.get_shape())
-        logging.info(f"Epoch {epoch :03d}, Loss: {loss.item()}, Neurons: {n_neurons}")
-        Loss_history.append(loss)
-        Node_history.append(n_neurons)
 
-        if loss < threshold:
+        logging.info(f"Epoch {epoch :03d}, Loss: {train_loss.item()}, Neurons: {n_neurons}, Grad norm: {grad_norm_val :.3e}")
+    
+        train_loss_history.append((epoch, train_loss))
+        grad_norm_history.append((epoch,grad_norm_val))
+        node_history.append((epoch, n_neurons))
+
+        if test_loss < threshold:
             # if loss is below threshold, stop training
             threshold_reached = True
             logging.info(f"Threshold reached, stopping training at epoch {epoch}")
             threshold_history.append(epoch)
             break
-    
+
+        if grad_norm_val < grad_norm_threshold/10: # stop training if gradient norm is very low
+            logging.info(f"Gradient norm below threshold, stopping training at epoch {epoch}")
+            break
+
+        if ((epoch + 1) % intervene_every*int(n_neurons/init_neurons) == 0 # scale intervention period linearly with number of neurons
+            or grad_norm_val < grad_norm_threshold) and epoch!=num_epochs-1: # intervene if gradient norm is below threshold, but not at last epoch
+            test_loss = test_step(mlp, x_test, y_test)
+            logging.info(f"Epoch {epoch :03d}, Test loss: {test_loss.item()}")
+            test_loss_history.append((epoch,test_loss))
+        
     if not threshold_reached:
         logging.info(f"Threshold not reached, stopping training at epoch {epoch}")
         threshold_history.append(epoch)
     
-    np.savetxt(f"{run_output_folder}/neurons.txt", Node_history)
-    np.savetxt(f"{run_output_folder}/loss.txt", Loss_history)
+    np.savetxt(f"{run_output_folder}/neurons.txt", node_history)
+    np.savetxt(f"{run_output_folder}/train_loss.txt", train_loss_history)
+    np.savetxt(f"{run_output_folder}/test_loss.txt", test_loss_history)
 
     y_pred = jax.vmap(mlp)(x_test)
     np.savetxt(f"{run_output_folder}/y_pred.txt", y_pred)

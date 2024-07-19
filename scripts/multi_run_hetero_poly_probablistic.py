@@ -16,12 +16,11 @@ import logging
 # jax.config.update("jax_enable_x64", True)
 # jax.config.update('jax_platform_name', 'cpu')
 
-NUM_RUNS = 10
+NUM_RUNS = 50
 
 input_size = 1
 hidden_sizes = [5, 5]
 min_neurons = 4
-max_neurons = 64
 output_size = 1
 initial_activation_list = [sin, jax.nn.relu, jax.nn.tanh]
 activation_list = [sin, jax.nn.relu, jax.nn.tanh]
@@ -51,7 +50,7 @@ config.__dict__.update({'n_samples': n_samples,
                         'threshold': threshold,
                         'activation_list': activation_list})
 
-Description = f"Hetero_{act_string}_poly_probablistic_strat_{optimizer.__name__}_no_bias_min_{min_neurons}_max_{max_neurons}_{hidden_sizes[0]}_{hidden_sizes[1]}_{num_epochs}_{intervene_every}_{threshold}_runs_{NUM_RUNS}"
+Description = f"Hetero_{act_string}_poly_normalized_probablistic_strat_{optimizer.__name__}_no_bias_min_{min_neurons}_{hidden_sizes[0]}_{hidden_sizes[1]}_{num_epochs}_{intervene_every}_{threshold}_runs_{NUM_RUNS}"
 fig_folder = f"../figures/{Description}"
 out_folder = f"../output/{Description}"
 os.makedirs(fig_folder, exist_ok=True)
@@ -95,17 +94,29 @@ y = poly(x)
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=start_seed)
 
+def p_continue(test_loss, n_neurons, min_neurons):
+    """
+    Unnormalized Probability of continuing with the current network
+    """
+    return 1 / (test_loss + 1)
+
 def p_add(test_loss, n_neurons, min_neurons):
     """
-    Probability of trying to add a neuron
+    Unnormalized Probability of trying to add a neuron
     """
     return test_loss / (test_loss + n_neurons / min_neurons)
 
 def p_remove(test_loss, n_neurons, min_neurons):
     """
-    Probability of trying to remove a neuron
+    Unnormalized Probability of trying to remove a neuron
     """
     return test_loss / (test_loss + min_neurons / n_neurons)
+
+def p_norm(test_loss, n_neurons, min_neurons):
+    """
+    Norm to get probability to 1
+    """
+    return p_continue(test_loss, n_neurons, min_neurons) + p_add(test_loss, n_neurons, min_neurons) + p_remove(test_loss, n_neurons, min_neurons)
 
 
 First_removal_history = []
@@ -176,7 +187,7 @@ for run in range(NUM_RUNS):
             # Neuron Addition criteria
             if ((len(update_history) == 0    # if no previous addition
                 or check_loss > test_loss) # if last addition was accepted
-                and jax.random.uniform(prob_key, minval = 0, maxval = 1)< p_add(test_loss, n_neurons, min_neurons)): # addition probability
+                and jax.random.uniform(prob_key, minval = 0, maxval = 1)< (p_add(test_loss, n_neurons, min_neurons)/p_norm(test_loss, n_neurons, min_neurons))): # addition probability
 
                 add_key, act_key = jax.random.split(add_key)
                 activation = activation_list[jax.random.choice(key, jnp.arange(len(activation_list)))]
@@ -194,7 +205,7 @@ for run in range(NUM_RUNS):
             # Neuron Removal criteria
             elif ((check_loss < test_loss) # check current loss against last accepted addition
                 and n_neurons>min_neurons # neuron floor
-                and jax.random.uniform(prob_key, minval = 0, maxval = 1)<p_remove(test_loss, n_neurons, min_neurons)): # removal probability 
+                and jax.random.uniform(prob_key, minval = 0, maxval = 1)<(p_remove(test_loss, n_neurons, min_neurons)/p_norm(test_loss, n_neurons, min_neurons))): # removal probability 
 
                 layer_key, neuron_key, sub_key = jax.random.split(sub_key,3)
                 layer = update_history[-1][-1] # get the layer of last addition

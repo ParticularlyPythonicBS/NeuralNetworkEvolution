@@ -28,8 +28,8 @@ initial_activation_list = [sin, jax.nn.relu, jax.nn.tanh]
 activation_list = [sin, jax.nn.relu, jax.nn.tanh]
 optimizer = optax.adabelief
 bias = False
-num_epochs = 10000
-intervene_every = 50
+num_epochs = 2500
+intervene_every = 100
 start_seed = 0
 threshold = 1e-4
 grad_norm_threshold = 1e-3
@@ -52,7 +52,7 @@ config.__dict__.update({'n_samples': n_samples,
                         'threshold': threshold,
                         'activation_list': activation_list})
 
-Description = f"Hetero_{act_string}_1dmnist_probablistic_strat_{optimizer.__name__}_no_bias_min_{min_neurons}_{hidden_sizes[0]}_{hidden_sizes[1]}_{num_epochs}_{intervene_every}_{threshold}_runs_{NUM_RUNS}"
+Description = f"Hetero_{act_string}_1dmnist_normalized_probablistic_strat_{optimizer.__name__}_no_bias_min_{min_neurons}_{hidden_sizes[0]}_{hidden_sizes[1]}_{num_epochs}_{intervene_every}_{threshold}_runs_{NUM_RUNS}"
 fig_folder = f"../figures/{Description}"
 out_folder = f"../output/{Description}"
 os.makedirs(fig_folder, exist_ok=True)
@@ -88,6 +88,12 @@ def accuracy(mlp, x, y):
     return jnp.mean(jnp.argmax(logits, axis=-1) == y)
 
 @eqx.filter_jit()
+def confusion_matrix(mlp, x, y):
+    logits = jax.nn.softmax(jax.vmap(mlp)(x))
+    preds = jnp.argmax(logits, axis=-1)
+    return jnp.histogram2d(y, preds, bins=(10, 10))[0]
+
+@eqx.filter_jit()
 def train_step(mlp, x, y, opt_state, opt_update):
     loss, grads = compute_loss(mlp, x, y)
     updates, opt_state = opt_update(grads, opt_state)
@@ -110,17 +116,29 @@ x_test, y_test = data["x_test"], data["y_test"]
 template = data["t"]
 
 
+def p_continue(test_loss, n_neurons, min_neurons):
+    """
+    Unnormalized Probability of continuing with the current network
+    """
+    return 1 / (test_loss + 1)
+
 def p_add(test_loss, n_neurons, min_neurons):
     """
-    Probability of trying to add a neuron
+    Unnormalized Probability of trying to add a neuron
     """
     return test_loss / (test_loss + n_neurons / min_neurons)
 
 def p_remove(test_loss, n_neurons, min_neurons):
     """
-    Probability of trying to remove a neuron
+    Unnormalized Probability of trying to remove a neuron
     """
     return test_loss / (test_loss + min_neurons / n_neurons)
+
+def p_norm(test_loss, n_neurons, min_neurons):
+    """
+    Norm to get probability to 1
+    """
+    return p_continue(test_loss, n_neurons, min_neurons) + p_add(test_loss, n_neurons, min_neurons) + p_remove(test_loss, n_neurons, min_neurons)
 
 
 First_removal_history = []
@@ -199,7 +217,7 @@ for run in range(NUM_RUNS):
             # Neuron Addition criteria
             if ((len(update_history) == 0    # if no previous addition
                 or check_loss > test_loss) # if last addition was accepted
-                and jax.random.uniform(prob_key, minval = 0, maxval = 1)< p_add(test_loss, n_neurons, min_neurons)): # addition probability
+                and jax.random.uniform(prob_key, minval = 0, maxval = 1)< (p_add(test_loss, n_neurons, min_neurons)/p_norm(test_loss, n_neurons, min_neurons))): # addition probability
 
                 add_key, act_key = jax.random.split(add_key)
                 activation = activation_list[jax.random.choice(key, jnp.arange(len(activation_list)))]
@@ -217,7 +235,7 @@ for run in range(NUM_RUNS):
             # Neuron Removal criteria
             elif ((check_loss < test_loss) # check current loss against last accepted addition
                 and n_neurons>min_neurons # neuron floor
-                and jax.random.uniform(prob_key, minval = 0, maxval = 1)<p_remove(test_loss, n_neurons, min_neurons)): # removal probability 
+                and jax.random.uniform(prob_key, minval = 0, maxval = 1)<(p_remove(test_loss, n_neurons, min_neurons)/p_norm(test_loss, n_neurons, min_neurons))): # removal probability 
 
                 layer_key, neuron_key, sub_key = jax.random.split(sub_key,3)
                 layer = update_history[-1][-1] # get the layer of last addition
@@ -253,6 +271,10 @@ for run in range(NUM_RUNS):
     np.savetxt(f"{run_output_folder}/final_adjacency_matrix.txt", final_adjacency_matrix)
     final_shape = mlp.get_shape()
     np.savetxt(f"{run_output_folder}/final_shape.txt", final_shape)
+
+    confusion_matrix_test = confusion_matrix(mlp, x_test, y_test)
+    np.savetxt(f"{run_output_folder}/confusion_matrix.txt", confusion_matrix_test)
+
     
     eqx.clear_caches()
     jax.clear_caches()
