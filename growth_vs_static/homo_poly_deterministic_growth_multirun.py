@@ -16,22 +16,22 @@ jax.config.update('jax_platform_name', 'cpu')
 NUM_RUNS = 50
 
 input_size = 1
-hidden_sizes = [2, 2] 
-min_neurons = 4
-max_neurons = 32
+hidden_sizes = [1, 1] 
+min_neurons = 2
+max_neurons = 16
 output_size = 1
 initial_activation_list = [jax.nn.tanh]
 activation_list = [jax.nn.tanh]
 optimizer = optax.adabelief
-bias = False
-num_epochs = 25000
-intervene_every = 200
+bias = True
+num_epochs = 20000
+intervene_every = 50
 start_seed = 0
 threshold = 1e-4
 grad_norm_threshold = 1e-3
 n_samples = 20000
 test_size = 0.2
-learning_rate = 3e-4
+learning_rate = 3e-3
 
 act_string = "_".join([act.__name__ for act in initial_activation_list])
 
@@ -39,6 +39,7 @@ config = MLPConfig(input_size=input_size,
                 output_size=output_size,
                 hidden_sizes=hidden_sizes,
                 initial_activation_list=initial_activation_list,
+                bias = bias,
                 seed=start_seed)
 
 config.__dict__.update({'n_samples': n_samples,
@@ -48,7 +49,7 @@ config.__dict__.update({'n_samples': n_samples,
                         'threshold': threshold,
                         'activation_list': activation_list})
 
-Description = f"Homo_{act_string}_poly_deterministic_addition_{optimizer.__name__}_no_bias_min_{min_neurons}_max_{max_neurons}_{hidden_sizes[0]}_{hidden_sizes[1]}_{num_epochs}_{intervene_every}_{start_seed}_{NUM_RUNS}"
+Description = f"Homo_{act_string}_poly_deterministic_addition_{optimizer.__name__}_bias_min_{min_neurons}_max_{max_neurons}_{hidden_sizes[0]}_{hidden_sizes[1]}_{num_epochs}_{intervene_every}_{start_seed}_{NUM_RUNS}"
 fig_folder = f"../figures/multi_run/{Description}"
 out_folder = f"../output/multi_run/{Description}"
 os.makedirs(fig_folder, exist_ok=True)
@@ -119,7 +120,7 @@ for run in range(NUM_RUNS):
             train_loss, mlp, opt_state = train_step(mlp, x_train, y_train, opt_state, opt.update)
             _, grads  = compute_loss(mlp, x_train, y_train)
             grad_norm_val = grad_norm(grads)
-            n_neurons = sum(mlp.get_shape())
+            n_neurons = sum(mlp.get_shape()) -output_size
 
             train_loss_history.append((epoch, train_loss))
             grad_norm_history.append((epoch,grad_norm_val))
@@ -136,7 +137,7 @@ for run in range(NUM_RUNS):
                 if n_neurons < max_neurons:
 
                     add_key, act_key = jax.random.split(add_key)
-                    activation = activation_list[jax.random.choice(key, jnp.arange(len(activation_list)))]
+                    activation = activation_list[jax.random.choice(act_key, jnp.arange(len(activation_list)))]
                     layers = len(mlp.get_shape()) - 1
                     layer = jax.random.randint(act_key, (1,), 0, layers)[0] # randomly select a layer to add neuron to
                     mlp.add_neuron(layer_index=layer, activation=activation, bias = bias, key=add_key)
