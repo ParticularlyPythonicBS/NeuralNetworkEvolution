@@ -1,0 +1,92 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "NeuralNetworkEvolution",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation.",
+    "crumbs": [
+      "NeuralNetworkEvolution"
+    ]
+  },
+  {
+    "objectID": "index.html#dev-notes",
+    "href": "index.html#dev-notes",
+    "title": "NeuralNetworkEvolution",
+    "section": "Dev Notes",
+    "text": "Dev Notes\nYou can install the package by\npip install -e '.[dev]'\nThe .[dev] makes it also install the dependencies for development.\n-e makes it install in editable mode so you can make changes to the code and see them reflected in the package.\nTo add commits and submit PRs, also install pre-commit with pip install pre-commit and run pre-commit install to install the git hooks.",
+    "crumbs": [
+      "NeuralNetworkEvolution"
+    ]
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "NeuralNetworkEvolution",
+    "section": "Install",
+    "text": "Install\npip install NeuralNetworkEvolution",
+    "crumbs": [
+      "NeuralNetworkEvolution"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "NeuralNetworkEvolution",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2",
+    "crumbs": [
+      "NeuralNetworkEvolution"
+    ]
+  },
+  {
+    "objectID": "neuron.html",
+    "href": "neuron.html",
+    "title": "Neuron",
+    "section": "",
+    "text": "source\n\nNeuron\n\n Neuron (in_features, activation=&lt;jax._src.custom_derivatives.custom_jvp\n         object at 0x7efcb1a8c160&gt;, bias=False, key=None)\n\nA simple neuron with a weight vector, bias, and activation function.\n\nneuron = Neuron(10)\nx = jax.random.normal(jax.random.PRNGKey(0), (10,))\ny = neuron(x)\nassert y.shape == ()\nassert neuron.importance().shape == ()\n\n2024-05-30 08:32:20.707579: W external/xla/xla/service/gpu/nvptx_compiler.cc:760] The NVIDIA driver's CUDA version is 12.2 which is older than the ptxas CUDA version (12.4.131). Because the driver is older than the ptxas version, XLA is disabling parallel compilation, which may slow down compilation. You should update your NVIDIA driver or use the NVIDIA-provided CUDA forward compatibility packages.",
+    "crumbs": [
+      "Neuron"
+    ]
+  },
+  {
+    "objectID": "mlp.html",
+    "href": "mlp.html",
+    "title": "MLP",
+    "section": "",
+    "text": "plt.style.use('default')\n\n\nsource\n\nCustomMLP\n\n CustomMLP (MLPConfig:NeuralNetworkEvolution.config.MLPConfig)\n\n\ntest_config = MLPConfig(input_size=3, output_size=1, hidden_sizes=[4, 5], initial_activation_list=[jax.nn.relu, jax.nn.sigmoid], seed=0)\nmlp = CustomMLP(test_config)\nadjacency_matrix = mlp.adjacency_matrix()\nplt.matshow(adjacency_matrix)\n\n\n\n\n\n\n\n\n\nsource\n\n\nmlp_plot\n\n mlp_plot (G, neuron_labels, neuron_importances)\n\nVisualizes the MLP as a directed graph using the networkx library. The nodes are colored based on their importance values and the edges are weighted based on their weights.\n\ntest_config = MLPConfig(input_size=3, output_size=1, hidden_sizes=[4, 5], initial_activation_list=[jax.nn.relu, jax.nn.tanh], last_activation=jax.nn.sigmoid ,seed=0)\nmlp = CustomMLP(test_config)\n\nG, neuron_labels, neuron_importances = mlp.visualize_graph()\nfig = mlp_plot(G, neuron_labels, neuron_importances)\nplt.show()",
+    "crumbs": [
+      "MLP"
+    ]
+  },
+  {
+    "objectID": "activations.html",
+    "href": "activations.html",
+    "title": "Activations",
+    "section": "",
+    "text": "source\n\nidentity\n\n identity (x)\n\nIdentity activation function\n\nsource\n\n\nsin\n\n sin (x)\n\nSine activation function",
+    "crumbs": [
+      "Activations"
+    ]
+  },
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "source\n\nfoo\n\n foo ()",
+    "crumbs": [
+      "core"
+    ]
+  },
+  {
+    "objectID": "config.html",
+    "href": "config.html",
+    "title": "Config",
+    "section": "",
+    "text": "source\n\nMLPConfig\n\n MLPConfig (seed:int, input_size:int, hidden_sizes:list, output_size:int,\n            initial_activation_list:list, last_activation:&lt;built-\n            infunctioncallable&gt;=&lt;function identity&gt;, bias:bool=False)",
+    "crumbs": [
+      "Config"
+    ]
+  }
+]
